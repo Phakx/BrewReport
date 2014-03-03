@@ -3,4 +3,4 @@
 Soon to be an SLA report Management tooling, with the capability to add / edit / remove Downtimes from your SLA reports and get them afterwards in either a nice graph or jasper format.
 
 WARNING: Project development only just began, there is no major functionality implemented yet
-<tt>rake doc:app</tt>.
+
