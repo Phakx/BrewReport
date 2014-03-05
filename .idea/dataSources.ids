@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails BrewReport: development" uuid="a08f282e-20ff-4d40-b5e3-037136a1841e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BrewReport: test" uuid="53f3b688-2f2a-4694-a693-986e3d1dd6ae">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BrewReport: production" uuid="33807495-4e83-4aef-8542-3a8d0eb4016f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

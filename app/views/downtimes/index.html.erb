@@ -1,0 +1,35 @@
+<h1>Listing downtimes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>Downtimetype</th>
+      <th>End</th>
+      <th>Comment</th>
+      <th>Downtime in Minutes</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @downtimes.each do |downtime| %>
+      <tr>
+        <td><%= downtime.start %></td>
+        <td><%= downtime.downtimeType %></td>
+        <td><%= downtime.end %></td>
+        <td><%= downtime.comment %></td>
+        <td><%= downtime.difference %></td>
+        <td><%= link_to 'Show', downtime %></td>
+        <td><%= link_to 'Edit', edit_downtime_path(downtime) %></td>
+        <td><%= link_to 'Destroy', downtime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Downtime', new_downtime_path %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @downtime.start %>
+</p>
+
+<p>
+  <strong>Downtimetype:</strong>
+  <%= @downtime.downtimeType %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @downtime.end %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @downtime.comment %>
+</p>
+<p>
+  <strong>Difference in Minutes:</strong>
+  <%= @downtime.difference %>
+</p>
+
+<%= link_to 'Edit', edit_downtime_path(@downtime) %> |
+<%= link_to 'Back', downtimes_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2014-03-05 15:57:50
+  downtimeType: MyString
+  end: 2014-03-05 15:57:50
+  comment: MyString
+
+two:
+  start: 2014-03-05 15:57:50
+  downtimeType: MyString
+  end: 2014-03-05 15:57:50
+  comment: MyString

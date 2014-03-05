@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2616923337">
+    <data-source source="LOCAL" name="Rails BrewReport: development" uuid="a08f282e-20ff-4d40-b5e3-037136a1841e">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/BrewReport_development</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails BrewReport: test" uuid="53f3b688-2f2a-4694-a693-986e3d1dd6ae">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/BrewReport_test</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails BrewReport: production" uuid="33807495-4e83-4aef-8542-3a8d0eb4016f">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/BrewReport_production</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
