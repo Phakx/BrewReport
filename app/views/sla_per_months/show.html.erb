@@ -12,7 +12,7 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @sla_per_month.customer_id %>
+  <%= @sla_per_month.customer.name %>
 </p>
 
 <%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month) %> |

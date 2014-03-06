@@ -17,7 +17,7 @@
       <tr>
         <td><%= sla_per_month.month %></td>
         <td><%= sla_per_month.year %></td>
-        <td><%= sla_per_month.customer_id %></td>
+        <td><%= sla_per_month.customer.name %></td>
         <td><%= link_to 'Show', sla_per_month %></td>
         <td><%= link_to 'Edit', edit_sla_per_month_path(sla_per_month) %></td>
         <td><%= link_to 'Destroy', sla_per_month, method: :delete, data: { confirm: 'Are you sure?' } %></td>
