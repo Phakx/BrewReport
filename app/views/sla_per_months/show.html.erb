@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @sla_per_month.month %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @sla_per_month.year %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @sla_per_month.customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month) %> |
+<%= link_to 'Back', sla_per_months_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  dailySlaStart: 1
+  dailySlaEnd: 1
+  weeklySlaDays: 
+  excludedDays: 
+
+two:
+  customer_id: 1
+  dailySlaStart: 1
+  dailySlaEnd: 1
+  weeklySlaDays: 
+  excludedDays: 

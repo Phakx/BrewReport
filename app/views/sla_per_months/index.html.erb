@@ -1,0 +1,31 @@
+<h1>Listing sla_per_months</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Customer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sla_per_months.each do |sla_per_month| %>
+      <tr>
+        <td><%= sla_per_month.month %></td>
+        <td><%= sla_per_month.year %></td>
+        <td><%= sla_per_month.customer_id %></td>
+        <td><%= link_to 'Show', sla_per_month %></td>
+        <td><%= link_to 'Edit', edit_sla_per_month_path(sla_per_month) %></td>
+        <td><%= link_to 'Destroy', sla_per_month, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sla per month', new_sla_per_month_path %>

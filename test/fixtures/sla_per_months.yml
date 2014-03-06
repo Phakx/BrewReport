@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  year: 1
+  customer_id: 1
+
+two:
+  month: MyString
+  year: 1
+  customer_id: 1

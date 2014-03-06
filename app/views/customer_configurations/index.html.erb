@@ -1,0 +1,35 @@
+<h1>Listing customer_configurations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Dailyslastart</th>
+      <th>Dailyslaend</th>
+      <th>Weeklysladays</th>
+      <th>Excludeddays</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_configurations.each do |customer_configuration| %>
+      <tr>
+        <td><%= customer_configuration.customer_id %></td>
+        <td><%= customer_configuration.dailySlaStart %></td>
+        <td><%= customer_configuration.dailySlaEnd %></td>
+        <td><%= customer_configuration.weeklySlaDays %></td>
+        <td><%= customer_configuration.excludedDays %></td>
+        <td><%= link_to 'Show', customer_configuration %></td>
+        <td><%= link_to 'Edit', edit_customer_configuration_path(customer_configuration) %></td>
+        <td><%= link_to 'Destroy', customer_configuration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer configuration', new_customer_configuration_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @customer_configuration.customer_id %>
+</p>
+
+<p>
+  <strong>Dailyslastart:</strong>
+  <%= @customer_configuration.dailySlaStart %>
+</p>
+
+<p>
+  <strong>Dailyslaend:</strong>
+  <%= @customer_configuration.dailySlaEnd %>
+</p>
+
+<p>
+  <strong>Weeklysladays:</strong>
+  <%= @customer_configuration.weeklySlaDays %>
+</p>
+
+<p>
+  <strong>Excludeddays:</strong>
+  <%= @customer_configuration.excludedDays %>
+</p>
+
+<%= link_to 'Edit', edit_customer_configuration_path(@customer_configuration) %> |
+<%= link_to 'Back', customer_configurations_path %>
