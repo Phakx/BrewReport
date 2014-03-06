@@ -1,4 +1,10 @@
 BrewReport::Application.routes.draw do
+  resources :customer_configurations
+
+  resources :sla_per_months
+
+  resources :customers
+
   resources :downtimes
 
   # The priority is based upon order of creation: first created -> highest priority.

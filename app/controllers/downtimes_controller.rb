@@ -69,6 +69,6 @@ class DowntimesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def downtime_params
-      params.require(:downtime).permit(:start, :downtimeType, :end, :comment)
+      params.require(:downtime).permit(:start, :downtimeType, :end, :comment, :SLAPerMonth_id)
     end
 end

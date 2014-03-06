@@ -7,7 +7,7 @@
       <th>Downtimetype</th>
       <th>End</th>
       <th>Comment</th>
-      <th>Downtime in Minutes</th>
+      <th>Slapermonth</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,7 +21,7 @@
         <td><%= downtime.downtimeType %></td>
         <td><%= downtime.end %></td>
         <td><%= downtime.comment %></td>
-        <td><%= downtime.difference %></td>
+        <td><%= downtime.SLAPerMonth_id %></td>
         <td><%= link_to 'Show', downtime %></td>
         <td><%= link_to 'Edit', edit_downtime_path(downtime) %></td>
         <td><%= link_to 'Destroy', downtime, method: :delete, data: { confirm: 'Are you sure?' } %></td>

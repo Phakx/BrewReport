@@ -11,13 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305145750) do
+ActiveRecord::Schema.define(version: 20140306095219) do
+
+  create_table "customer_configurations", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "dailySlaStart"
+    t.integer  "dailySlaEnd"
+    t.text     "weeklySlaDays"
+    t.text     "excludedDays"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "downtimes", force: true do |t|
     t.datetime "start"
     t.string   "downtimeType"
     t.datetime "end"
     t.string   "comment"
+    t.integer  "SLAPerMonth_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sla_per_months", force: true do |t|
+    t.string   "month"
+    t.integer  "year"
+    t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

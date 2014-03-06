@@ -18,7 +18,7 @@ class DowntimesControllerTest < ActionController::TestCase
 
   test "should create downtime" do
     assert_difference('Downtime.count') do
-      post :create, downtime: { comment: @downtime.comment, downtimeType: @downtime.downtimeType, end: @downtime.end, start: @downtime.start }
+      post :create, downtime: { SLAPerMonth_id: @downtime.SLAPerMonth_id, comment: @downtime.comment, downtimeType: @downtime.downtimeType, end: @downtime.end, start: @downtime.start }
     end
 
     assert_redirected_to downtime_path(assigns(:downtime))
@@ -35,7 +35,7 @@ class DowntimesControllerTest < ActionController::TestCase
   end
 
   test "should update downtime" do
-    patch :update, id: @downtime, downtime: { comment: @downtime.comment, downtimeType: @downtime.downtimeType, end: @downtime.end, start: @downtime.start }
+    patch :update, id: @downtime, downtime: { SLAPerMonth_id: @downtime.SLAPerMonth_id, comment: @downtime.comment, downtimeType: @downtime.downtimeType, end: @downtime.end, start: @downtime.start }
     assert_redirected_to downtime_path(assigns(:downtime))
   end
 

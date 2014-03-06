@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  start: 2014-03-05 15:57:50
+  start: 2014-03-06 10:44:09
   downtimeType: MyString
-  end: 2014-03-05 15:57:50
+  end: 2014-03-06 10:44:09
   comment: MyString
+  SLAPerMonth_id: 1
 
 two:
-  start: 2014-03-05 15:57:50
+  start: 2014-03-06 10:44:09
   downtimeType: MyString
-  end: 2014-03-05 15:57:50
+  end: 2014-03-06 10:44:09
   comment: MyString
+  SLAPerMonth_id: 1
