@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140306095219) do
     t.string   "downtimeType"
     t.datetime "end"
     t.string   "comment"
-    t.integer  "SLAPerMonth_id"
+    t.integer  "SlaPerMonth_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

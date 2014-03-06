@@ -3,8 +3,7 @@ class CreateSlaPerMonths < ActiveRecord::Migration
     create_table :sla_per_months do |t|
       t.string :month
       t.integer :year
-      t.integer :customer_id
-
+      t.belongs_to :customer
       t.timestamps
     end
   end
