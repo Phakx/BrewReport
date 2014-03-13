@@ -3,7 +3,7 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use mysql as the database for Active Record
+# Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
 # Use Less for stylesheets
@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc'
 end
 
 # Use ActiveModel has_secure_password
