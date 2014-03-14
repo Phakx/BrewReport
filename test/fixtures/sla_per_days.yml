@@ -2,8 +2,8 @@
 
 one:
   day: 1
-  SlaPerMonth_id: 1
+  sla_per_month_id: 1
 
 two:
   day: 1
-  SlaPerMonth_id: 1
+  sla_per_month_id: 1

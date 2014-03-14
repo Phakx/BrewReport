@@ -34,14 +34,14 @@ ActiveRecord::Schema.define(version: 20140309205036) do
     t.string   "downtimeType"
     t.datetime "end"
     t.string   "comment"
-    t.integer  "SlaPerDay_id"
+    t.integer  "sla_per_day_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "sla_per_days", force: true do |t|
     t.integer  "day"
-    t.integer  "SlaPerMonth_id"
+    t.integer  "sla_per_month_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

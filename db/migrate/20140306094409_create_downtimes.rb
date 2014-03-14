@@ -5,7 +5,7 @@ class CreateDowntimes < ActiveRecord::Migration
       t.string :downtimeType
       t.datetime :end
       t.string :comment
-      t.belongs_to :SlaPerDay
+      t.belongs_to :sla_per_day
 
       t.timestamps
     end

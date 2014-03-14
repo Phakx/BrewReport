@@ -15,6 +15,7 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
+    ApplicationHelper.import_downtimes_from_icinga(1, 2, 3)
   end
 
   # GET /customers/1/edit
