@@ -6,10 +6,10 @@ module ApplicationHelper
   def self.import_downtimes_from_icinga(url, username, password)
     logger = Logger.new(STDOUT)
     logger.debug 'Begin Fetching Icinga SLA Report'
-    #jasper_xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
-    #  config.strict.nonet
-    #end
-    jasper_xml = Nokogiri::XML(open('/home/bjoern/RubymineProjects/sampleReport.xml'))
+    jasper_xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
+      config.strict.nonet
+    end
+
     logger.debug 'Fetched XML starting to parse'
     log_entries = jasper_xml.xpath('//log_entry')
     logger.debug "Found #{log_entries.size} Log entries"
