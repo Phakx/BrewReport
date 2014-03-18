@@ -5,9 +5,10 @@ module ApplicationHelper
 
   def self.import_downtimes_from_icinga(url, username, password, customer)
     Rails.logger.debug 'Begin Fetching Icinga SLA Report'
-    xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
-      config.strict.nonet
-    end
+    #xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
+    #  config.strict.nonet
+    #end
+    xml = Nokogiri::XML(open('test/helpers/sampleReport.xml'))
     Rails.logger.debug 'Fetched XML starting to parse'
     log_entries = xml.xpath('//log_entry')
     Rails.logger.debug "Found #{log_entries.size} Log entries"
@@ -63,9 +64,9 @@ module ApplicationHelper
       end
 
     else
-
       Rails.logger.debug 'found sla_per_month object fetching day objects'
       sla_per_days = SlaPerDay.retrieve_all_by_sla_per_month(sla_per_month.id)
+
       sla_per_days.each do |daily_sla|
         Rails.logger.debug 'searching for persisted matching SLA object'
         Rails.logger.debug "ID=  #{daily_sla.id} DAY= #{daily_sla.day} expected day= #{day}"
@@ -74,6 +75,7 @@ module ApplicationHelper
           return daily_sla
         end
       end
+
       Rails.logger.debug 'No match found creating new SlaPerDay and persisting'
       return sla_per_day.call(sla_per_month)
 

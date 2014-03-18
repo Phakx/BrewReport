@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service_availability>
+  <service name="net-https SOMESERVICE Login" host_name="SOMEHOST">
+    <time_ok_scheduled>244972</time_ok_scheduled>
+    <percent_time_ok_scheduled>10.126</percent_time_ok_scheduled>
+    <percent_known_time_ok_scheduled>10.126</percent_known_time_ok_scheduled>
+    <time_ok_unscheduled>2107986</time_ok_unscheduled>
+    <percent_time_ok_unscheduled>87.136</percent_time_ok_unscheduled>
+    <percent_known_time_ok_unscheduled>87.136</percent_known_time_ok_unscheduled>
+    <total_time_ok>2352958</total_time_ok>
+    <percent_total_time_ok>97.262</percent_total_time_ok>
+    <percent_known_time_ok>97.262</percent_known_time_ok>
+    <time_warning_scheduled>0</time_warning_scheduled>
+    <percent_time_warning_scheduled>0.000</percent_time_warning_scheduled>
+    <percent_known_time_warning_scheduled>0.000</percent_known_time_warning_scheduled>
+    <time_warning_unscheduled>0</time_warning_unscheduled>
+    <percent_time_warning_unscheduled>0.000</percent_time_warning_unscheduled>
+    <percent_known_time_warning_unscheduled>0.000</percent_known_time_warning_unscheduled>
+    <total_time_warning>0</total_time_warning>
+    <percent_total_time_warning>0.000</percent_total_time_warning>
+    <percent_known_time_warning>0.000</percent_known_time_warning>
+    <time_unknown_scheduled>0</time_unknown_scheduled>
+    <percent_time_unknown_scheduled>0.000</percent_time_unknown_scheduled>
+    <percent_known_time_unknown_scheduled>0.000</percent_known_time_unknown_scheduled>
+    <time_unknown_unscheduled>0</time_unknown_unscheduled>
+    <percent_time_unknown_unscheduled>0.000</percent_time_unknown_unscheduled>
+    <percent_known_time_unknown_unscheduled>0.000</percent_known_time_unknown_unscheduled>
+    <total_time_unknown>0</total_time_unknown>
+    <percent_total_time_unknown>0.000</percent_total_time_unknown>
+    <percent_known_time_unknown>0.000</percent_known_time_unknown>
+    <time_critical_scheduled>61935</time_critical_scheduled>
+    <percent_time_critical_scheduled>2.560</percent_time_critical_scheduled>
+    <percent_known_time_critical_scheduled>2.560</percent_known_time_critical_scheduled>
+    <time_critical_unscheduled>4306</time_critical_unscheduled>
+    <percent_time_critical_unscheduled>0.178</percent_time_critical_unscheduled>
+    <percent_known_time_critical_unscheduled>0.178</percent_known_time_critical_unscheduled>
+    <total_time_critical>66241</total_time_critical>
+    <percent_total_time_critical>2.738</percent_total_time_critical>
+    <percent_known_time_critical>2.738</percent_known_time_critical>
+    <time_undetermined_not_running>0</time_undetermined_not_running>
+    <percent_time_undetermined_not_running>0.000</percent_time_undetermined_not_running>
+    <time_undetermined_no_data>0</time_undetermined_no_data>
+    <percent_time_undetermined_no_data>0.000</percent_time_undetermined_no_data>
+    <total_time_undetermined>0</total_time_undetermined>
+    <percent_total_time_undetermined>0.000</percent_total_time_undetermined>
+    <total_time_all>2419199</total_time_all>
+    <percent_total_time_all>100.000</percent_total_time_all>
+    <percent_known_time_all>100.000</percent_known_time_all>
+    <log_entries>
+      <log_entry>
+        <start_time_string>02-01-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391209200</start_time_timestamp>
+        <end_time_string>02-02-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391295600</end_time_timestamp>
+        <duration_string>1d 0h 0m 0s</duration_string>
+        <duration_timestamp>86400</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.108 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-02-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391295600</start_time_timestamp>
+        <end_time_string>02-02-2014 23:22:03</end_time_string>
+        <end_time_timestamp>1391379723</end_time_timestamp>
+        <duration_string>0d 23h 22m 3s</duration_string>
+        <duration_timestamp>84123</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.434 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-02-2014 23:22:03</start_time_string>
+        <start_time_timestamp>1391379723</start_time_timestamp>
+        <end_time_string>02-03-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391382000</end_time_timestamp>
+        <duration_string>0d 0h 37m 57s</duration_string>
+        <duration_timestamp>2277</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-03-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391382000</start_time_timestamp>
+        <end_time_string>02-03-2014 00:21:08</end_time_string>
+        <end_time_timestamp>1391383268</end_time_timestamp>
+        <duration_string>0d 0h 21m 8s</duration_string>
+        <duration_timestamp>1268</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.434 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-03-2014 00:21:08</start_time_string>
+        <start_time_timestamp>1391383268</start_time_timestamp>
+        <end_time_string>02-03-2014 10:07:34</end_time_string>
+        <end_time_timestamp>1391418454</end_time_timestamp>
+        <duration_string>0d 9h 46m 26s</duration_string>
+        <duration_timestamp>35186</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-03-2014 23:21:55</start_time_string>
+        <start_time_timestamp>1391466115</start_time_timestamp>
+        <end_time_string>02-04-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391468400</end_time_timestamp>
+        <duration_string>0d 0h 38m 5s</duration_string>
+        <duration_timestamp>2285</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-04-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391468400</start_time_timestamp>
+        <end_time_string>02-04-2014 00:21:08</end_time_string>
+        <end_time_timestamp>1391469668</end_time_timestamp>
+        <duration_string>0d 0h 21m 8s</duration_string>
+        <duration_timestamp>1268</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.368 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-04-2014 00:21:08</start_time_string>
+        <start_time_timestamp>1391469668</start_time_timestamp>
+        <end_time_string>02-04-2014 14:50:33</end_time_string>
+        <end_time_timestamp>1391521833</end_time_timestamp>
+        <duration_string>0d 14h 29m 25s</duration_string>
+        <duration_timestamp>52165</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-04-2014 23:22:05</start_time_string>
+        <start_time_timestamp>1391552525</start_time_timestamp>
+        <end_time_string>02-05-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391554800</end_time_timestamp>
+        <duration_string>0d 0h 37m 55s</duration_string>
+        <duration_timestamp>2275</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-05-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391554800</start_time_timestamp>
+        <end_time_string>02-05-2014 00:21:08</end_time_string>
+        <end_time_timestamp>1391556068</end_time_timestamp>
+        <duration_string>0d 0h 21m 8s</duration_string>
+        <duration_timestamp>1268</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.424 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-05-2014 00:21:08</start_time_string>
+        <start_time_timestamp>1391556068</start_time_timestamp>
+        <end_time_string>02-05-2014 17:44:54</end_time_string>
+        <end_time_timestamp>1391618694</end_time_timestamp>
+        <duration_string>0d 17h 23m 46s</duration_string>
+        <duration_timestamp>62626</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-05-2014 23:21:59</start_time_string>
+        <start_time_timestamp>1391638919</start_time_timestamp>
+        <end_time_string>02-06-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391641200</end_time_timestamp>
+        <duration_string>0d 0h 38m 1s</duration_string>
+        <duration_timestamp>2281</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-06-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391641200</start_time_timestamp>
+        <end_time_string>02-06-2014 00:21:13</end_time_string>
+        <end_time_timestamp>1391642473</end_time_timestamp>
+        <duration_string>0d 0h 21m 13s</duration_string>
+        <duration_timestamp>1273</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.929 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-06-2014 00:21:13</start_time_string>
+        <start_time_timestamp>1391642473</start_time_timestamp>
+        <end_time_string>02-06-2014 06:18:04</end_time_string>
+        <end_time_timestamp>1391663884</end_time_timestamp>
+        <duration_string>0d 5h 56m 51s</duration_string>
+        <duration_timestamp>21411</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-06-2014 23:22:02</start_time_string>
+        <start_time_timestamp>1391725322</start_time_timestamp>
+        <end_time_string>02-07-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391727600</end_time_timestamp>
+        <duration_string>0d 0h 37m 58s</duration_string>
+        <duration_timestamp>2278</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-07-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391727600</start_time_timestamp>
+        <end_time_string>02-07-2014 00:21:08</end_time_string>
+        <end_time_timestamp>1391728868</end_time_timestamp>
+        <duration_string>0d 0h 21m 8s</duration_string>
+        <duration_timestamp>1268</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.43 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-07-2014 00:21:08</start_time_string>
+        <start_time_timestamp>1391728868</start_time_timestamp>
+        <end_time_string>02-08-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391814000</end_time_timestamp>
+        <duration_string>0d 23h 38m 52s</duration_string>
+        <duration_timestamp>85132</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-08-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391814000</start_time_timestamp>
+        <end_time_string>02-09-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391900400</end_time_timestamp>
+        <duration_string>1d 0h 0m 0s</duration_string>
+        <duration_timestamp>86400</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.482 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-09-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391900400</start_time_timestamp>
+        <end_time_string>02-09-2014 23:22:07</end_time_string>
+        <end_time_timestamp>1391984527</end_time_timestamp>
+        <duration_string>0d 23h 22m 7s</duration_string>
+        <duration_timestamp>84127</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.58 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-09-2014 23:22:07</start_time_string>
+        <start_time_timestamp>1391984527</start_time_timestamp>
+        <end_time_string>02-10-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1391986800</end_time_timestamp>
+        <duration_string>0d 0h 37m 53s</duration_string>
+        <duration_timestamp>2273</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-10-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1391986800</start_time_timestamp>
+        <end_time_string>02-10-2014 00:21:09</end_time_string>
+        <end_time_timestamp>1391988069</end_time_timestamp>
+        <duration_string>0d 0h 21m 9s</duration_string>
+        <duration_timestamp>1269</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.58 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-10-2014 00:21:09</start_time_string>
+        <start_time_timestamp>1391988069</start_time_timestamp>
+        <end_time_string>02-10-2014 14:47:58</end_time_string>
+        <end_time_timestamp>1392040078</end_time_timestamp>
+        <duration_string>0d 14h 26m 49s</duration_string>
+        <duration_timestamp>52009</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-10-2014 23:25:39</start_time_string>
+        <start_time_timestamp>1392071139</start_time_timestamp>
+        <end_time_string>02-11-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392073200</end_time_timestamp>
+        <duration_string>0d 0h 34m 21s</duration_string>
+        <duration_timestamp>2061</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-11-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392073200</start_time_timestamp>
+        <end_time_string>02-11-2014 00:24:48</end_time_string>
+        <end_time_timestamp>1392074688</end_time_timestamp>
+        <duration_string>0d 0h 24m 48s</duration_string>
+        <duration_timestamp>1488</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.519 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-11-2014 00:24:48</start_time_string>
+        <start_time_timestamp>1392074688</start_time_timestamp>
+        <end_time_string>02-11-2014 06:04:30</end_time_string>
+        <end_time_timestamp>1392095070</end_time_timestamp>
+        <duration_string>0d 5h 39m 42s</duration_string>
+        <duration_timestamp>20382</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-11-2014 06:04:30</start_time_string>
+        <start_time_timestamp>1392095070</start_time_timestamp>
+        <end_time_string>02-11-2014 06:59:10</end_time_string>
+        <end_time_timestamp>1392098350</end_time_timestamp>
+        <duration_string>0d 0h 54m 40s</duration_string>
+        <duration_timestamp>3280</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 500, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-11-2014 06:59:10</start_time_string>
+        <start_time_timestamp>1392098350</start_time_timestamp>
+        <end_time_string>02-11-2014 10:02:44</end_time_string>
+        <end_time_timestamp>1392109364</end_time_timestamp>
+        <duration_string>0d 3h 3m 34s</duration_string>
+        <duration_timestamp>11014</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.129 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-11-2014 23:22:14</start_time_string>
+        <start_time_timestamp>1392157334</start_time_timestamp>
+        <end_time_string>02-12-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392159600</end_time_timestamp>
+        <duration_string>0d 0h 37m 46s</duration_string>
+        <duration_timestamp>2266</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-12-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392159600</start_time_timestamp>
+        <end_time_string>02-12-2014 00:21:22</end_time_string>
+        <end_time_timestamp>1392160882</end_time_timestamp>
+        <duration_string>0d 0h 21m 22s</duration_string>
+        <duration_timestamp>1282</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.47 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-12-2014 00:21:22</start_time_string>
+        <start_time_timestamp>1392160882</start_time_timestamp>
+        <end_time_string>02-12-2014 10:57:43</end_time_string>
+        <end_time_timestamp>1392199063</end_time_timestamp>
+        <duration_string>0d 10h 36m 21s</duration_string>
+        <duration_timestamp>38181</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-12-2014 23:22:13</start_time_string>
+        <start_time_timestamp>1392243733</start_time_timestamp>
+        <end_time_string>02-13-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392246000</end_time_timestamp>
+        <duration_string>0d 0h 37m 47s</duration_string>
+        <duration_timestamp>2267</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-13-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392246000</start_time_timestamp>
+        <end_time_string>02-13-2014 00:21:21</end_time_string>
+        <end_time_timestamp>1392247281</end_time_timestamp>
+        <duration_string>0d 0h 21m 21s</duration_string>
+        <duration_timestamp>1281</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.118 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-13-2014 00:21:21</start_time_string>
+        <start_time_timestamp>1392247281</start_time_timestamp>
+        <end_time_string>02-13-2014 15:00:30</end_time_string>
+        <end_time_timestamp>1392300030</end_time_timestamp>
+        <duration_string>0d 14h 39m 9s</duration_string>
+        <duration_timestamp>52749</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-13-2014 23:22:19</start_time_string>
+        <start_time_timestamp>1392330139</start_time_timestamp>
+        <end_time_string>02-14-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392332400</end_time_timestamp>
+        <duration_string>0d 0h 37m 41s</duration_string>
+        <duration_timestamp>2261</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-14-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392332400</start_time_timestamp>
+        <end_time_string>02-14-2014 00:21:25</end_time_string>
+        <end_time_timestamp>1392333685</end_time_timestamp>
+        <duration_string>0d 0h 21m 25s</duration_string>
+        <duration_timestamp>1285</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.287 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-14-2014 00:21:25</start_time_string>
+        <start_time_timestamp>1392333685</start_time_timestamp>
+        <end_time_string>02-14-2014 08:37:24</end_time_string>
+        <end_time_timestamp>1392363444</end_time_timestamp>
+        <duration_string>0d 8h 15m 59s</duration_string>
+        <duration_timestamp>29759</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-15-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392418800</start_time_timestamp>
+        <end_time_string>02-16-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392505200</end_time_timestamp>
+        <duration_string>1d 0h 0m 0s</duration_string>
+        <duration_timestamp>86400</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.52 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-16-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392505200</start_time_timestamp>
+        <end_time_string>02-16-2014 23:22:28</end_time_string>
+        <end_time_timestamp>1392589348</end_time_timestamp>
+        <duration_string>0d 23h 22m 28s</duration_string>
+        <duration_timestamp>84148</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.892 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-16-2014 23:22:28</start_time_string>
+        <start_time_timestamp>1392589348</start_time_timestamp>
+        <end_time_string>02-17-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392591600</end_time_timestamp>
+        <duration_string>0d 0h 37m 32s</duration_string>
+        <duration_timestamp>2252</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392591600</start_time_timestamp>
+        <end_time_string>02-17-2014 00:21:32</end_time_string>
+        <end_time_timestamp>1392592892</end_time_timestamp>
+        <duration_string>0d 0h 21m 32s</duration_string>
+        <duration_timestamp>1292</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.892 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 00:21:32</start_time_string>
+        <start_time_timestamp>1392592892</start_time_timestamp>
+        <end_time_string>02-17-2014 06:04:14</end_time_string>
+        <end_time_timestamp>1392613454</end_time_timestamp>
+        <duration_string>0d 5h 42m 42s</duration_string>
+        <duration_timestamp>20562</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 06:04:14</start_time_string>
+        <start_time_timestamp>1392613454</start_time_timestamp>
+        <end_time_string>02-17-2014 06:29:14</end_time_string>
+        <end_time_timestamp>1392614954</end_time_timestamp>
+        <duration_string>0d 0h 25m 0s</duration_string>
+        <duration_timestamp>1500</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 503, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 06:29:14</start_time_string>
+        <start_time_timestamp>1392614954</start_time_timestamp>
+        <end_time_string>02-17-2014 06:30:23</end_time_string>
+        <end_time_timestamp>1392615023</end_time_timestamp>
+        <duration_string>0d 0h 1m 9s</duration_string>
+        <duration_timestamp>69</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.181 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 06:30:23</start_time_string>
+        <start_time_timestamp>1392615023</start_time_timestamp>
+        <end_time_string>02-17-2014 06:38:14</end_time_string>
+        <end_time_timestamp>1392615494</end_time_timestamp>
+        <duration_string>0d 0h 7m 51s</duration_string>
+        <duration_timestamp>471</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 06:38:14</start_time_string>
+        <start_time_timestamp>1392615494</start_time_timestamp>
+        <end_time_string>02-17-2014 06:59:23</end_time_string>
+        <end_time_timestamp>1392616763</end_time_timestamp>
+        <duration_string>0d 0h 21m 9s</duration_string>
+        <duration_timestamp>1269</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 503, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 06:59:23</start_time_string>
+        <start_time_timestamp>1392616763</start_time_timestamp>
+        <end_time_string>02-17-2014 07:43:37</end_time_string>
+        <end_time_timestamp>1392619417</end_time_timestamp>
+        <duration_string>0d 0h 44m 14s</duration_string>
+        <duration_timestamp>2654</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.602 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 07:43:37</start_time_string>
+        <start_time_timestamp>1392619417</start_time_timestamp>
+        <end_time_string>02-17-2014 09:40:14</end_time_string>
+        <end_time_timestamp>1392626414</end_time_timestamp>
+        <duration_string>0d 1h 56m 37s</duration_string>
+        <duration_timestamp>6997</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-17-2014 23:25:53</start_time_string>
+        <start_time_timestamp>1392675953</start_time_timestamp>
+        <end_time_string>02-18-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392678000</end_time_timestamp>
+        <duration_string>0d 0h 34m 7s</duration_string>
+        <duration_timestamp>2047</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-18-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392678000</start_time_timestamp>
+        <end_time_string>02-18-2014 00:24:56</end_time_string>
+        <end_time_timestamp>1392679496</end_time_timestamp>
+        <duration_string>0d 0h 24m 56s</duration_string>
+        <duration_timestamp>1496</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.347 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-18-2014 00:24:56</start_time_string>
+        <start_time_timestamp>1392679496</start_time_timestamp>
+        <end_time_string>02-18-2014 08:53:45</end_time_string>
+        <end_time_timestamp>1392710025</end_time_timestamp>
+        <duration_string>0d 8h 28m 49s</duration_string>
+        <duration_timestamp>30529</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-18-2014 23:22:13</start_time_string>
+        <start_time_timestamp>1392762133</start_time_timestamp>
+        <end_time_string>02-19-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392764400</end_time_timestamp>
+        <duration_string>0d 0h 37m 47s</duration_string>
+        <duration_timestamp>2267</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-19-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392764400</start_time_timestamp>
+        <end_time_string>02-19-2014 00:21:20</end_time_string>
+        <end_time_timestamp>1392765680</end_time_timestamp>
+        <duration_string>0d 0h 21m 20s</duration_string>
+        <duration_timestamp>1280</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.786 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-19-2014 00:21:20</start_time_string>
+        <start_time_timestamp>1392765680</start_time_timestamp>
+        <end_time_string>02-19-2014 15:04:20</end_time_string>
+        <end_time_timestamp>1392818660</end_time_timestamp>
+        <duration_string>0d 14h 43m 0s</duration_string>
+        <duration_timestamp>52980</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-19-2014 23:22:15</start_time_string>
+        <start_time_timestamp>1392848535</start_time_timestamp>
+        <end_time_string>02-20-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392850800</end_time_timestamp>
+        <duration_string>0d 0h 37m 45s</duration_string>
+        <duration_timestamp>2265</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-20-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392850800</start_time_timestamp>
+        <end_time_string>02-20-2014 00:21:20</end_time_string>
+        <end_time_timestamp>1392852080</end_time_timestamp>
+        <duration_string>0d 0h 21m 20s</duration_string>
+        <duration_timestamp>1280</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.558 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-20-2014 00:21:20</start_time_string>
+        <start_time_timestamp>1392852080</start_time_timestamp>
+        <end_time_string>02-20-2014 23:22:19</end_time_string>
+        <end_time_timestamp>1392934939</end_time_timestamp>
+        <duration_string>0d 23h 0m 59s</duration_string>
+        <duration_timestamp>82859</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-20-2014 23:22:19</start_time_string>
+        <start_time_timestamp>1392934939</start_time_timestamp>
+        <end_time_string>02-21-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1392937200</end_time_timestamp>
+        <duration_string>0d 0h 37m 41s</duration_string>
+        <duration_timestamp>2261</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-21-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1392937200</start_time_timestamp>
+        <end_time_string>02-21-2014 00:21:20</end_time_string>
+        <end_time_timestamp>1392938480</end_time_timestamp>
+        <duration_string>0d 0h 21m 20s</duration_string>
+        <duration_timestamp>1280</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.491 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-21-2014 00:21:20</start_time_string>
+        <start_time_timestamp>1392938480</start_time_timestamp>
+        <end_time_string>02-21-2014 09:20:37</end_time_string>
+        <end_time_timestamp>1392970837</end_time_timestamp>
+        <duration_string>0d 8h 59m 17s</duration_string>
+        <duration_timestamp>32357</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-21-2014 18:12:29</start_time_string>
+        <start_time_timestamp>1393002749</start_time_timestamp>
+        <end_time_string>02-21-2014 18:22:32</end_time_string>
+        <end_time_timestamp>1393003352</end_time_timestamp>
+        <duration_string>0d 0h 10m 3s</duration_string>
+        <duration_timestamp>603</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-21-2014 18:22:32</start_time_string>
+        <start_time_timestamp>1393003352</start_time_timestamp>
+        <end_time_string>02-22-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393023600</end_time_timestamp>
+        <duration_string>0d 5h 37m 28s</duration_string>
+        <duration_timestamp>20248</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 503, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-22-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393023600</start_time_timestamp>
+        <end_time_string>02-22-2014 08:25:14</end_time_string>
+        <end_time_timestamp>1393053914</end_time_timestamp>
+        <duration_string>0d 8h 25m 14s</duration_string>
+        <duration_timestamp>30314</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 503, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-22-2014 08:25:14</start_time_string>
+        <start_time_timestamp>1393053914</start_time_timestamp>
+        <end_time_string>02-22-2014 08:49:14</end_time_string>
+        <end_time_timestamp>1393055354</end_time_timestamp>
+        <duration_string>0d 0h 24m 0s</duration_string>
+        <duration_timestamp>1440</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.153 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-22-2014 08:49:14</start_time_string>
+        <start_time_timestamp>1393055354</start_time_timestamp>
+        <end_time_string>02-22-2014 11:19:44</end_time_string>
+        <end_time_timestamp>1393064384</end_time_timestamp>
+        <duration_string>0d 2h 30m 30s</duration_string>
+        <duration_timestamp>9030</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #1: Failed HTTP Response Code Verification (received 503, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-22-2014 11:19:44</start_time_string>
+        <start_time_timestamp>1393064384</start_time_timestamp>
+        <end_time_string>02-23-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393110000</end_time_timestamp>
+        <duration_string>0d 12h 40m 16s</duration_string>
+        <duration_timestamp>45616</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.468 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-23-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393110000</start_time_timestamp>
+        <end_time_string>02-24-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393196400</end_time_timestamp>
+        <duration_string>1d 0h 0m 0s</duration_string>
+        <duration_timestamp>86400</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.078 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-24-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393196400</start_time_timestamp>
+        <end_time_string>02-24-2014 11:31:13</end_time_string>
+        <end_time_timestamp>1393237873</end_time_timestamp>
+        <duration_string>0d 11h 31m 13s</duration_string>
+        <duration_timestamp>41473</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 7.078 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-24-2014 11:31:13</start_time_string>
+        <start_time_timestamp>1393237873</start_time_timestamp>
+        <end_time_string>02-24-2014 13:29:43</end_time_string>
+        <end_time_timestamp>1393244983</end_time_timestamp>
+        <duration_string>0d 1h 58m 30s</duration_string>
+        <duration_timestamp>7110</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-24-2014 23:22:17</start_time_string>
+        <start_time_timestamp>1393280537</start_time_timestamp>
+        <end_time_string>02-25-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393282800</end_time_timestamp>
+        <duration_string>0d 0h 37m 43s</duration_string>
+        <duration_timestamp>2263</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-25-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393282800</start_time_timestamp>
+        <end_time_string>02-25-2014 00:21:25</end_time_string>
+        <end_time_timestamp>1393284085</end_time_timestamp>
+        <duration_string>0d 0h 21m 25s</duration_string>
+        <duration_timestamp>1285</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.779 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-25-2014 00:21:25</start_time_string>
+        <start_time_timestamp>1393284085</start_time_timestamp>
+        <end_time_string>02-25-2014 23:22:21</end_time_string>
+        <end_time_timestamp>1393366941</end_time_timestamp>
+        <duration_string>0d 23h 0m 56s</duration_string>
+        <duration_timestamp>82856</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-25-2014 23:22:21</start_time_string>
+        <start_time_timestamp>1393366941</start_time_timestamp>
+        <end_time_string>02-26-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393369200</end_time_timestamp>
+        <duration_string>0d 0h 37m 39s</duration_string>
+        <duration_timestamp>2259</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393369200</start_time_timestamp>
+        <end_time_string>02-26-2014 00:21:29</end_time_string>
+        <end_time_timestamp>1393370489</end_time_timestamp>
+        <duration_string>0d 0h 21m 29s</duration_string>
+        <duration_timestamp>1289</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.356 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 00:21:29</start_time_string>
+        <start_time_timestamp>1393370489</start_time_timestamp>
+        <end_time_string>02-26-2014 08:18:14</end_time_string>
+        <end_time_timestamp>1393399094</end_time_timestamp>
+        <duration_string>0d 7h 56m 45s</duration_string>
+        <duration_timestamp>28605</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 08:18:14</start_time_string>
+        <start_time_timestamp>1393399094</start_time_timestamp>
+        <end_time_string>02-26-2014 08:23:14</end_time_string>
+        <end_time_timestamp>1393399394</end_time_timestamp>
+        <duration_string>0d 0h 5m 0s</duration_string>
+        <duration_timestamp>300</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #2: Failed HTTP Response Code Verification (received 500, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 08:23:14</start_time_string>
+        <start_time_timestamp>1393399394</start_time_timestamp>
+        <end_time_string>02-26-2014 08:32:14</end_time_string>
+        <end_time_timestamp>1393399934</end_time_timestamp>
+        <duration_string>0d 0h 9m 0s</duration_string>
+        <duration_timestamp>540</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.388 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 08:32:14</start_time_string>
+        <start_time_timestamp>1393399934</start_time_timestamp>
+        <end_time_string>02-26-2014 08:37:14</end_time_string>
+        <end_time_timestamp>1393400234</end_time_timestamp>
+        <duration_string>0d 0h 5m 0s</duration_string>
+        <duration_timestamp>300</duration_timestamp>
+        <entry_type>SERVICE CRITICAL</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject CRITICAL - case #2: Failed HTTP Response Code Verification (received 500, expecting 200)</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 08:37:14</start_time_string>
+        <start_time_timestamp>1393400234</start_time_timestamp>
+        <end_time_string>02-26-2014 11:43:56</end_time_string>
+        <end_time_timestamp>1393411436</end_time_timestamp>
+        <duration_string>0d 3h 6m 42s</duration_string>
+        <duration_timestamp>11202</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.348 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-26-2014 23:22:11</start_time_string>
+        <start_time_timestamp>1393453331</start_time_timestamp>
+        <end_time_string>02-27-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393455600</end_time_timestamp>
+        <duration_string>0d 0h 37m 49s</duration_string>
+        <duration_timestamp>2269</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-27-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393455600</start_time_timestamp>
+        <end_time_string>02-27-2014 00:21:21</end_time_string>
+        <end_time_timestamp>1393456881</end_time_timestamp>
+        <duration_string>0d 0h 21m 21s</duration_string>
+        <duration_timestamp>1281</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.317 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-27-2014 00:21:21</start_time_string>
+        <start_time_timestamp>1393456881</start_time_timestamp>
+        <end_time_string>02-27-2014 09:31:20</end_time_string>
+        <end_time_timestamp>1393489880</end_time_timestamp>
+        <duration_string>0d 9h 9m 59s</duration_string>
+        <duration_timestamp>32999</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-27-2014 23:22:16</start_time_string>
+        <start_time_timestamp>1393539736</start_time_timestamp>
+        <end_time_string>02-28-2014 00:00:00</end_time_string>
+        <end_time_timestamp>1393542000</end_time_timestamp>
+        <duration_string>0d 0h 37m 44s</duration_string>
+        <duration_timestamp>2264</duration_timestamp>
+        <entry_type>HOST DOWNTIME START</entry_type>
+        <state_type/>
+        <state_information>Start of scheduled downtime</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-28-2014 00:00:00</start_time_string>
+        <start_time_timestamp>1393542000</start_time_timestamp>
+        <end_time_string>02-28-2014 00:21:25</end_time_string>
+        <end_time_timestamp>1393543285</end_time_timestamp>
+        <duration_string>0d 0h 21m 25s</duration_string>
+        <duration_timestamp>1285</duration_timestamp>
+        <entry_type>SERVICE OK</entry_type>
+        <state_type>HARD</state_type>
+        <state_information>WebInject OK - All tests passed successfully in 6.451 seconds</state_information>
+      </log_entry>
+      <log_entry>
+        <start_time_string>02-28-2014 00:21:25</start_time_string>
+        <start_time_timestamp>1393543285</start_time_timestamp>
+        <end_time_string>02-28-2014 09:44:10</end_time_string>
+        <end_time_timestamp>1393577050</end_time_timestamp>
+        <duration_string>0d 9h 22m 45s</duration_string>
+        <duration_timestamp>33765</duration_timestamp>
+        <entry_type>HOST DOWNTIME END</entry_type>
+        <state_type/>
+        <state_information>End of scheduled downtime</state_information>
+      </log_entry>
+    </log_entries>
+  </service>
+</service_availability>

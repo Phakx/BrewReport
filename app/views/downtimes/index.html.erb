@@ -15,9 +15,10 @@
   </thead>
 
   <tbody>
+    <% Time.zone = 'Berlin' %>
     <% @downtimes.each do |downtime| %>
       <tr>
-        <td><%= downtime.start %></td>
+        <td><%= downtime.start%></td>
         <td><%= downtime.downtimeType %></td>
         <td><%= downtime.end %></td>
         <td><%= downtime.comment %></td>
