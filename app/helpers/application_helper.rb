@@ -23,7 +23,8 @@ module ApplicationHelper
     end_datetime = Time.at(entry.xpath('end_time_timestamp').text.to_i).to_datetime
     sla_per_day = find_or_create_sla_per_day(start_datetime.day, start_datetime.month, start_datetime.year, customer)
     Rails.logger.debug 'Checking if Downtime already exists'
-
+    #TODO extend check to include Customer (2 customers can have the same Dowmtimes theoretically...),when the Downtime -> Service -> Slaperday abstraction is
+    #implemented check has to be extendended to service as well
     if Downtime.check_if_downtime_exists(start_datetime, end_datetime).nil?
       downtime = Downtime.new
       Rails.logger.debug "Using sla_per_day with id: #{sla_per_day.id} for new Downtime"
