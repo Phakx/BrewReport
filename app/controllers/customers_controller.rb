@@ -15,7 +15,8 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
-    ApplicationHelper.import_downtimes_from_icinga(1, 2, 3, @customer)
+    #TODO remove debugging call
+    ApplicationHelper.import_downtimes_from_icinga('test/helpers/sampleReport.xml', 2, 3, @customer)
   end
 
   # GET /customers/1/edit

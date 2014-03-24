@@ -30,7 +30,7 @@ test:
   host: localhost
 
 production:
-  adapter: sqlite3
+  adapter: mysql2
   encoding: utf8
   database: BrewReport_production
   pool: 5

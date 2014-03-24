@@ -5,11 +5,11 @@ module ApplicationHelper
 
   def self.import_downtimes_from_icinga(url, username, password, customer)
     Rails.logger.debug 'Begin Fetching Icinga SLA Report'
-    #xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
-    #  config.strict.nonet
-    #end
-    xml = Nokogiri::XML(open('test/helpers/sampleReport.xml'))
-    Rails.logger.debug 'Fetched XML starting to parse'
+    xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
+      config.strict.nonet
+    end
+    #xml = Nokogiri::XML(open('test/helpers/sampleReport.xml'))
+    Rails.logger.info 'Fetched XML starting to parse'
     log_entries = xml.xpath('//log_entry')
     Rails.logger.debug "Found #{log_entries.size} Log entries"
     log_entries.each do |entry|
@@ -51,7 +51,7 @@ module ApplicationHelper
     sla_per_month = SlaPerMonth.retrieve_by_month_and_year(month, year)
     if sla_per_month.nil?
 
-      Rails.logger.debug 'no matching month object found creating new Month and day object'
+      Rails.logger.info 'no matching month object found creating new Month and day object'
       sla_per_month_new = SlaPerMonth.new
       sla_per_month_new.month= month
       sla_per_month_new.year = year
@@ -60,6 +60,7 @@ module ApplicationHelper
       if sla_per_month_new.save
         return sla_per_day.call(sla_per_month_new)
       else
+        Rails.logger.error 'Persisting Object to Database failed'
         return nil
       end
 
@@ -68,7 +69,7 @@ module ApplicationHelper
       sla_per_days = SlaPerDay.retrieve_all_by_sla_per_month(sla_per_month.id)
 
       sla_per_days.each do |daily_sla|
-        Rails.logger.debug 'searching for persisted matching SLA object'
+        Rails.logger.info 'searching for persisted matching SLA object'
         Rails.logger.debug "ID=  #{daily_sla.id} DAY= #{daily_sla.day} expected day= #{day}"
         if daily_sla.id != '' && (daily_sla.day == day)
           Rails.logger.debug 'found match'
@@ -76,7 +77,7 @@ module ApplicationHelper
         end
       end
 
-      Rails.logger.debug 'No match found creating new SlaPerDay and persisting'
+      Rails.logger.info 'No match found creating new SlaPerDay and persisting'
       return sla_per_day.call(sla_per_month)
 
     end
