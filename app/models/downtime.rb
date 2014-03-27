@@ -1,8 +1,13 @@
 class Downtime < ActiveRecord::Base
   belongs_to :sla_per_day
+
   def difference
     #Downtime Length in Minutes
     (self.end - self.start) / 60
+  end
+
+  def self.retrieve_all_by_day(sla_per_day_id)
+    self.where('sla_per_day_id = ?', sla_per_day_id).to_a
   end
 
   def self.check_if_downtime_exists(start_datetime, end_datetime)
