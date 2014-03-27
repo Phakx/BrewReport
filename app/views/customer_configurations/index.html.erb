@@ -18,8 +18,8 @@
     <% @customer_configurations.each do |customer_configuration| %>
       <tr>
         <td><%= customer_configuration.customer_id %></td>
-        <td><%= customer_configuration.dailySlaStart %></td>
-        <td><%= customer_configuration.dailySlaEnd %></td>
+        <td><%= customer_configuration.dailySlaStart.strftime('%H:%M:%S') %></td>
+        <td><%= customer_configuration.dailySlaEnd.strftime('%H:%M:%S') %></td>
         <td><%= customer_configuration.weeklySlaDays %></td>
         <td><%= customer_configuration.excludedDays %></td>
         <td><%= link_to 'Show', customer_configuration %></td>

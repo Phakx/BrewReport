@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 20140309205036) do
 
   create_table "customer_configurations", force: true do |t|
     t.integer  "customer_id"
-    t.integer  "dailySlaStart"
-    t.integer  "dailySlaEnd"
+    t.time     "dailySlaStart"
+    t.time     "dailySlaEnd"
     t.text     "weeklySlaDays"
     t.text     "excludedDays"
     t.datetime "created_at"

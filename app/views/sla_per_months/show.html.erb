@@ -14,6 +14,13 @@
   <strong>Customer:</strong>
   <%= @sla_per_month.customer.name %>
 </p>
-
+<p>
+  <strong>MONTHLY INFO MOTHERFUCKER:</strong><br>
+  RANDOM DOWNTIME NUMBER:<%= @downtime_info.downtime_in_minutes %>
+  <br>
+  RANDOM AVAIL NUMBER: <%= @downtime_info.configured_availability %>
+  <br>
+  FUCKING PERCENTAGE: <%= (1  - @downtime_info.downtime_in_minutes / @downtime_info.configured_availability) * 100  %>
+</p>
 <%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month) %> |
 <%= link_to 'Back', sla_per_months_path %>

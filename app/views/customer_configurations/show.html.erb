@@ -7,12 +7,12 @@
 
 <p>
   <strong>Dailyslastart:</strong>
-  <%= @customer_configuration.dailySlaStart %>
+  <%= @customer_configuration.dailySlaStart.strftime('%H:%M:%S') %>
 </p>
 
 <p>
   <strong>Dailyslaend:</strong>
-  <%= @customer_configuration.dailySlaEnd %>
+  <%= @customer_configuration.dailySlaEnd.strftime('%H:%M:%S') %>
 </p>
 
 <p>

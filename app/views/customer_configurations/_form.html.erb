@@ -1,37 +1,43 @@
 <%= form_for(@customer_configuration) do |f| %>
-  <% if @customer_configuration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@customer_configuration.errors.count, "error") %> prohibited this customer_configuration from being saved:</h2>
+    <% if @customer_configuration.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@customer_configuration.errors.count, "error") %> prohibited this customer_configuration
+            from being saved:</h2>
 
-      <ul>
-      <% @customer_configuration.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @customer_configuration.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <% Time.zone = 'Berlin' %>
+    <div class="field">
+      <%= f.label :customer_id %>
+      <br>
+      <%= f.collection_select :customer_id, Customer.all, :id, :name %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :customer_id %><br>
-    <%= f.number_field :customer_id %>
-  </div>
-  <div class="field">
-    <%= f.label :dailySlaStart %><br>
-    <%= f.number_field :dailySlaStart %>
-  </div>
-  <div class="field">
-    <%= f.label :dailySlaEnd %><br>
-    <%= f.number_field :dailySlaEnd %>
-  </div>
-  <div class="field">
-    <%= f.label :weeklySlaDays %><br>
-    <%= f.text_field :weeklySlaDays %>
-  </div>
-  <div class="field">
-    <%= f.label :excludedDays %><br>
-    <%= f.text_field :excludedDays %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :dailySlaStart %>
+      <br>
+      <%= f.time_select :dailySlaStart %>
+    </div>
+    <div class="field">
+      <%= f.label :dailySlaEnd %>
+      <br>
+      <%= f.time_select :dailySlaEnd %>
+    </div>
+    <div class="field">
+      <%= f.label :weeklySlaDays %>
+      <br>
+      <%= f.text_field :weeklySlaDays %>
+    </div>
+    <div class="field">
+      <%= f.label :excludedDays %>
+      <br>
+      <%= f.text_field :excludedDays %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
