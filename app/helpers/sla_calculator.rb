@@ -44,12 +44,23 @@ class SlaCalculator
     Time.zone = 'Berlin'
     all_by_day.each do |downtime|
 
-      unless downtime.start.strftime(TIME_CONVERSION) > daily_sla_end.strftime(TIME_CONVERSION) || downtime.end.strftime(TIME_CONVERSION) < daily_sla_start.strftime(TIME_CONVERSION) || !downtime.comment.include?('CRITICAL')
-        Rails.logger.debug "Downtime start is : #{downtime.start.strftime(TIME_CONVERSION)}, Daily SLA start is: #{daily_sla_start.strftime(TIME_CONVERSION)}"
-        downtime.start = downtime.start.change({:hour => daily_sla_start.hour}) unless daily_sla_start.strftime(TIME_CONVERSION) < downtime.start.strftime(TIME_CONVERSION)
-        downtime.end = downtime.end.change({:hour => daily_sla_end.hour}) unless daily_sla_end.strftime(TIME_CONVERSION) > downtime.end.strftime(TIME_CONVERSION)
-        Rails.logger.debug "Difference is: #{downtime.difference}"
-        daily_downtime += downtime.difference
+      downtime_starts_after_daily_end = downtime.start.strftime(TIME_CONVERSION) > daily_sla_end.strftime(TIME_CONVERSION)
+      downtime_ends_before_daily_start = downtime.end.strftime(TIME_CONVERSION) < daily_sla_start.strftime(TIME_CONVERSION)
+      unless downtime_starts_after_daily_end || downtime_ends_before_daily_start || !downtime.comment.include?('CRITICAL')
+
+        Rails.logger.debug "Downtime start is : #{downtime.start.strftime(TIME_CONVERSION)}, Daily SLA start is: #{daily_sla_start.strftime(TIME_CONVERSION)}, Setting start to boundary if necessary"
+        unless daily_sla_start.strftime(TIME_CONVERSION) < downtime.start.strftime(TIME_CONVERSION)
+          downtime.start = downtime.start.change({:hour => daily_sla_start.hour, :minute => daily_sla_start.minute})
+        end
+
+        Rails.logger.debug "Downtime end is : #{downtime.end.strftime(TIME_CONVERSION)}, Daily SLA end is: #{daily_sla_end.strftime(TIME_CONVERSION)}, Setting end to boundary if necessary"
+        unless daily_sla_end.strftime(TIME_CONVERSION) > downtime.end.strftime(TIME_CONVERSION)
+          downtime.end = downtime.end.change({:hour => daily_sla_end.hour, :minute => daily_sla_end.minute})
+        end
+
+        difference = downtime.difference
+        Rails.logger.debug "Difference is: #{difference}"
+        daily_downtime += difference
       end
     end
     daily_downtime
