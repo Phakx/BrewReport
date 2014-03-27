@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140309205036) do
   end
 
   create_table "sla_per_months", force: true do |t|
-    t.string   "month"
+    t.integer  "month"
     t.integer  "year"
     t.integer  "customer_id"
     t.datetime "created_at"

@@ -1,5 +1,6 @@
 class SlaCalculator
   TIME_CONVERSION = '%H%M'
+
   def initialize(customer)
     @customer = customer
     @customer_config = CustomerConfiguration.find_by_customer_id(@customer.id)
@@ -17,7 +18,15 @@ class SlaCalculator
     spds = SlaPerDay.where('sla_per_month_id = ?', @current_sla_per_month.id).to_a
     monthly_downtime_in_minutes = 0
     spds.each do |spd|
-      monthly_downtime_in_minutes += get_effective_downtime_for_day(spd)
+
+      weekly_sla_days = @customer_config.weeklySlaDays.split(',')
+      int_array = weekly_sla_days.collect { |i| i.to_i }
+
+      t = DateTime.new(@current_sla_per_month.year, @current_sla_per_month.month, spd.day)
+      if int_array.include?(t.wday)
+        monthly_downtime_in_minutes += get_effective_downtime_for_day(spd)
+      end
+
     end
     monthly_downtime_info = MonthlyDowntimeInfo.new
     minutes = @customer_config.get_availablility_in_minutes * Time.days_in_month(@current_sla_per_month.month.to_i, @current_sla_per_month.year.to_i)
