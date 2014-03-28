@@ -17,13 +17,16 @@ class SlaCalculator
     end
     spds = SlaPerDay.where('sla_per_month_id = ?', @current_sla_per_month.id).to_a
     monthly_downtime_in_seconds = 0
-    weekly_sla_days = @customer_config.weeklySlaDays.split(',')
-    int_array = weekly_sla_days.collect { |i| i.to_i }
+    int_array = @customer_config.weeklySlaDays.split(',').collect { |i| i.to_i }
+    special_exclude_days = @customer_config.excludedDays.split(',').collect{|date_string| DateTime.parse(date_string)}
+
+    day_is_in_conf_weekly_and_not_excluded =lambda {|day_to_check|
+      int_array.include?(day_to_check.wday) && !special_exclude_days.include?(day_to_check)
+    }
     spds.each do |spd|
 
-
       t = DateTime.new(@current_sla_per_month.year, @current_sla_per_month.month, spd.day)
-      if int_array.include?(t.wday)
+      if day_is_in_conf_weekly_and_not_excluded.call(t)
         monthly_downtime_in_seconds += get_effective_downtime_for_day(spd)
       end
 
@@ -31,7 +34,7 @@ class SlaCalculator
     monthly_downtime_info = MonthlyDowntimeInfo.new
     available_days_in_month = lambda {
       date_new = Date.new(@current_sla_per_month.year.to_i, @current_sla_per_month.month.to_i)
-      days_in_month = (date_new.beginning_of_month..date_new.end_of_month).count{|day| int_array.include?(day.wday)}
+      days_in_month = (date_new.beginning_of_month..date_new.end_of_month).count{|day| day_is_in_conf_weekly_and_not_excluded.call(day)}
       Rails.logger.debug "Available days in  month: #{days_in_month}"
       days_in_month
     }
