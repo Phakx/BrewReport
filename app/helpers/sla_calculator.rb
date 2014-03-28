@@ -46,15 +46,18 @@ class SlaCalculator
 
       downtime_starts_after_daily_end = downtime.start.strftime(TIME_CONVERSION) > daily_sla_end.strftime(TIME_CONVERSION)
       downtime_ends_before_daily_start = downtime.end.strftime(TIME_CONVERSION) < daily_sla_start.strftime(TIME_CONVERSION)
-      unless downtime_starts_after_daily_end || downtime_ends_before_daily_start || !downtime.comment.include?('CRITICAL')
+      type_does_not_include_critical = !downtime.downtime_type.include?('CRITICAL')
+      unless downtime_starts_after_daily_end || downtime_ends_before_daily_start || type_does_not_include_critical
 
         Rails.logger.debug "Downtime start is : #{downtime.start.strftime(TIME_CONVERSION)}, Daily SLA start is: #{daily_sla_start.strftime(TIME_CONVERSION)}, Setting start to boundary if necessary"
-        unless daily_sla_start.strftime(TIME_CONVERSION) < downtime.start.strftime(TIME_CONVERSION)
+        sla_start_is_before_downtime_start = daily_sla_start.strftime(TIME_CONVERSION) < downtime.start.strftime(TIME_CONVERSION)
+        unless sla_start_is_before_downtime_start
           downtime.start = downtime.start.change({:hour => daily_sla_start.hour, :minute => daily_sla_start.minute})
         end
 
         Rails.logger.debug "Downtime end is : #{downtime.end.strftime(TIME_CONVERSION)}, Daily SLA end is: #{daily_sla_end.strftime(TIME_CONVERSION)}, Setting end to boundary if necessary"
-        unless daily_sla_end.strftime(TIME_CONVERSION) > downtime.end.strftime(TIME_CONVERSION)
+        sla_end_is_after_downtime_end = daily_sla_end.strftime(TIME_CONVERSION) > downtime.end.strftime(TIME_CONVERSION)
+        unless sla_end_is_after_downtime_end
           downtime.end = downtime.end.change({:hour => daily_sla_end.hour, :minute => daily_sla_end.minute})
         end
 
