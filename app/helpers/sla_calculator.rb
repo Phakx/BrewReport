@@ -16,37 +16,43 @@ class SlaCalculator
       end
     end
     spds = SlaPerDay.where('sla_per_month_id = ?', @current_sla_per_month.id).to_a
-    monthly_downtime_in_minutes = 0
+    monthly_downtime_in_seconds = 0
+    weekly_sla_days = @customer_config.weeklySlaDays.split(',')
+    int_array = weekly_sla_days.collect { |i| i.to_i }
     spds.each do |spd|
 
-      weekly_sla_days = @customer_config.weeklySlaDays.split(',')
-      int_array = weekly_sla_days.collect { |i| i.to_i }
 
       t = DateTime.new(@current_sla_per_month.year, @current_sla_per_month.month, spd.day)
       if int_array.include?(t.wday)
-        monthly_downtime_in_minutes += get_effective_downtime_for_day(spd)
+        monthly_downtime_in_seconds += get_effective_downtime_for_day(spd)
       end
 
     end
     monthly_downtime_info = MonthlyDowntimeInfo.new
-    minutes = @customer_config.get_availablility_in_minutes * Time.days_in_month(@current_sla_per_month.month.to_i, @current_sla_per_month.year.to_i)
-    monthly_downtime_info.configured_availability = minutes
+    available_days_in_month = lambda {
+      date_new = Date.new(@current_sla_per_month.year.to_i, @current_sla_per_month.month.to_i)
+      days_in_month = (date_new.beginning_of_month..date_new.end_of_month).count{|day| int_array.include?(day.wday)}
+      Rails.logger.debug "Available days in  month: #{days_in_month}"
+      days_in_month
+    }
+    seconds = @customer_config.get_availablility_in_seconds * available_days_in_month.call
+    monthly_downtime_info.configured_availability = seconds
 
-    monthly_downtime_info.downtime_in_minutes = monthly_downtime_in_minutes
+    monthly_downtime_info.downtime_in_seconds = monthly_downtime_in_seconds
     monthly_downtime_info
   end
 
   def get_effective_downtime_for_day(sla_per_day)
-    all_by_day = Downtime.retrieve_all_by_day(sla_per_day)
+    all_downtimes_by_day = Downtime.retrieve_all_by_day(sla_per_day)
     daily_sla_start = @customer_config.dailySlaStart
     daily_sla_end = @customer_config.dailySlaEnd
     daily_downtime = 0
     Time.zone = 'Berlin'
-    all_by_day.each do |downtime|
+    all_downtimes_by_day.each do |downtime|
 
       downtime_starts_after_daily_end = downtime.start.strftime(TIME_CONVERSION) > daily_sla_end.strftime(TIME_CONVERSION)
       downtime_ends_before_daily_start = downtime.end.strftime(TIME_CONVERSION) < daily_sla_start.strftime(TIME_CONVERSION)
-      type_does_not_include_critical = !downtime.downtime_type.include?('CRITICAL')
+      type_does_not_include_critical = !downtime.downtimeType.include?('CRITICAL')
       unless downtime_starts_after_daily_end || downtime_ends_before_daily_start || type_does_not_include_critical
 
         Rails.logger.debug "Downtime start is : #{downtime.start.strftime(TIME_CONVERSION)}, Daily SLA start is: #{daily_sla_start.strftime(TIME_CONVERSION)}, Setting start to boundary if necessary"

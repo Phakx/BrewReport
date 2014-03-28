@@ -4,7 +4,7 @@ class Downtime < ActiveRecord::Base
   def difference
     #Downtime Length in Minutes
     Rails.logger.debug "Starttime: #{self.start}, Endtime: #{self.end}, Comment was: #{self.comment}"
-    (self.end - self.start) / 60
+    (self.end - self.start)
   end
 
   def self.retrieve_all_by_day(sla_per_day_id)
