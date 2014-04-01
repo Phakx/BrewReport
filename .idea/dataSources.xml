@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2616923337">
+  <component name="DataSourceManagerImpl" format="xml" hash="2982764306">
     <data-source source="LOCAL" name="Rails BrewReport: development" uuid="a08f282e-20ff-4d40-b5e3-037136a1841e">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Phakx\IdeaProjects\BrewReport\BrewReport_development</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/BrewReport_development</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails BrewReport: test" uuid="53f3b688-2f2a-4694-a693-986e3d1dd6ae">
       <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/BrewReport_test</jdbc-url>
-      <user-name>root</user-name>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/BrewReport_test</jdbc-url>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails BrewReport: production" uuid="33807495-4e83-4aef-8542-3a8d0eb4016f">
@@ -19,6 +18,20 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/BrewReport_production</jdbc-url>
       <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="SQLite - BrewReport_test" uuid="44c50032-a4c7-4c0a-abd6-999d67396bca">
+      <driver-ref>sqlite.zentus</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/BrewReport_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="SQLite - BrewReport_Develop [2]" uuid="063e6869-7e61-48cd-9885-6cad181278e8">
+      <driver-ref>sqlite.zentus</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/BrewReport_development</jdbc-url>
       <libraries />
     </data-source>
   </component>

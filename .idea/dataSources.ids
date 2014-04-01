@@ -9,4 +9,120 @@
   <data-source source="LOCAL" name="Rails BrewReport: production" uuid="33807495-4e83-4aef-8542-3a8d0eb4016f">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="SQLite - BrewReport_test" uuid="44c50032-a4c7-4c0a-abd6-999d67396bca">
+    <database-info product="SQLite" version="3.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="CUSTOMERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="CUSTOMER_CONFIGURATIONS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="customer_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="dailySlaStart" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="dailySlaEnd" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="weeklySlaDays" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="excludedDays" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="DOWNTIMES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="start" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="downtimeType" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="end" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="comment" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sla_per_day_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SCHEMA_MIGRATIONS" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="SLA_PER_DAYS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="day" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sla_per_month_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SLA_PER_MONTHS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="month" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="customer_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="SQLite - BrewReport_Develop [2]" uuid="063e6869-7e61-48cd-9885-6cad181278e8">
+    <database-info product="SQLite" version="3.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="CUSTOMERS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="CUSTOMER_CONFIGURATIONS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="customer_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="dailySlaStart" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="dailySlaEnd" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="weeklySlaDays" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="excludedDays" sqlType="TEXT" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="DOWNTIMES" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="start" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="downtimeType" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="end" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="comment" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sla_per_day_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SCHEMA_MIGRATIONS" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="SLA_PER_DAYS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="day" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sla_per_month_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SLA_PER_MONTHS" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="month" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="year" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="customer_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="SQLITE_SEQUENCE" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
 </component>
