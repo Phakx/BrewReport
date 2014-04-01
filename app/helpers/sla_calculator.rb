@@ -11,21 +11,25 @@ class SlaCalculator
     all_spm_by_customer.each do |spm|
       if spm == month
         @current_sla_per_month = spm
-      else
-        raise 'no Data present'
       end
     end
     spds = SlaPerDay.where('sla_per_month_id = ?', @current_sla_per_month.id).to_a
     monthly_downtime_in_seconds = 0
-    int_array = @customer_config.weeklySlaDays.split(',').collect { |i| i.to_i }
-    special_exclude_days = @customer_config.excludedDays.split(',').collect{|date_string| DateTime.parse(date_string)}
+    special_exclude_days = []
+    int_array = []
+    unless @customer_config.weeklySlaDays.nil?
+      int_array = @customer_config.weeklySlaDays.split(',').collect { |i| i.to_i }
+    end
+    unless @customer_config.excludedDays.nil?
+      special_exclude_days = @customer_config.excludedDays.split(',').collect { |date_string| DateTime.parse(date_string) }
+    end
 
-    day_is_in_conf_weekly_and_not_excluded =lambda {|day_to_check|
+    day_is_in_conf_weekly_and_not_excluded =lambda { |day_to_check|
       int_array.include?(day_to_check.wday) && !special_exclude_days.include?(day_to_check)
     }
     spds.each do |spd|
 
-      t = DateTime.new(@current_sla_per_month.year, @current_sla_per_month.month, spd.day)
+      t = DateTime.new(@current_sla_per_month.year.to_i, @current_sla_per_month.month.to_i, spd.day.to_i)
       if day_is_in_conf_weekly_and_not_excluded.call(t)
         monthly_downtime_in_seconds += get_effective_downtime_for_day(spd)
       end
@@ -34,7 +38,7 @@ class SlaCalculator
     monthly_downtime_info = MonthlyDowntimeInfo.new
     available_days_in_month = lambda {
       date_new = Date.new(@current_sla_per_month.year.to_i, @current_sla_per_month.month.to_i)
-      days_in_month = (date_new.beginning_of_month..date_new.end_of_month).count{|day| day_is_in_conf_weekly_and_not_excluded.call(day)}
+      days_in_month = (date_new.beginning_of_month..date_new.end_of_month).count { |day| day_is_in_conf_weekly_and_not_excluded.call(day) }
       Rails.logger.debug "Available days in  month: #{days_in_month}"
       days_in_month
     }

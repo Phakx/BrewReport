@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140309205036) do
 
   create_table "downtimes", force: true do |t|
     t.datetime "start"
-    t.string   "downtimeType"
+    t.string   "downtime_type"
     t.datetime "end"
     t.string   "comment"
     t.integer  "sla_per_day_id"

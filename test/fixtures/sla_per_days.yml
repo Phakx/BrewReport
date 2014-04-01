@@ -5,5 +5,5 @@ one:
   sla_per_month_id: 1
 
 two:
-  day: 1
+  day: 2
   sla_per_month_id: 1
