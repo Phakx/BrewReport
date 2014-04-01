@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="wrapper">
-  <div class="container"><ul class="menu" rel="sam1">
+  <div class="container"><ul id="menu" class="menu" rel="sam1">
     <li class="menu_item"><%= link_to 'Customer', customers_path %></li>
     <li class="menu_item"><%= link_to 'Configuration', customer_configurations_path %></li>
     <li class="menu_item"><%= link_to 'Monthly reports', sla_per_months_path %></li>
@@ -17,9 +17,6 @@
   </div>
 </div>
 
-<script type="text/javascript">
-    setNavigation();
-</script>
 <%= yield %>
 
 </body>

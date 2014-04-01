@@ -6,12 +6,8 @@ gem 'rails', '4.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-group :production do
-  gem 'mysql2'
-end
-
 # Use Less for stylesheets
-gem 'less-rails'
+#gem 'less-rails'
 
 gem 'nokogiri'
 
@@ -19,7 +15,8 @@ gem 'nokogiri'
 gem 'uglifier', '>= 1.3.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+
+#gem 'therubyracer', platforms: :ruby
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

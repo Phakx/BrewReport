@@ -1,6 +1,6 @@
 BrewReport::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.less.compress = true
+  #config.less.compress = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 

@@ -31,7 +31,7 @@ module ApplicationHelper
       downtime.sla_per_day = sla_per_day
       downtime.start = start_datetime
       downtime.end = end_datetime
-      downtime.downtimeType = entry.xpath('entry_type').text
+      downtime.downtime_type = entry.xpath('entry_type').text
       downtime.comment = entry.xpath('state_information').text
       downtime.save
     else

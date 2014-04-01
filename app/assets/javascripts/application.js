@@ -11,4 +11,6 @@
 // about supported directives.
 //
 //= require turbolinks
-//= require_tree .
+//= require lib/jquery.min
+//= require plugins/menu
+//= require init
