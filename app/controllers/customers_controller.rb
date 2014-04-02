@@ -4,6 +4,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
+    @customer_active = 'active'
     @customers = Customer.all
   end
 
@@ -66,6 +67,7 @@ class CustomersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
+      @customer_active = 'active'
       @customer = Customer.find(params[:id])
     end
 

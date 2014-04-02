@@ -4,6 +4,7 @@ class DowntimesController < ApplicationController
   # GET /downtimes
   # GET /downtimes.json
   def index
+    @downtime_active = 'active'
     @downtimes = Downtime.all
   end
 
@@ -64,6 +65,7 @@ class DowntimesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_downtime
+      @downtime_active = 'active'
       @downtime = Downtime.find(params[:id])
     end
 

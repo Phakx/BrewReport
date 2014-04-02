@@ -4,6 +4,7 @@ class CustomerConfigurationsController < ApplicationController
   # GET /customer_configurations
   # GET /customer_configurations.json
   def index
+    @customer_config_active = 'active'
     @customer_configurations = CustomerConfiguration.all
   end
 
@@ -62,13 +63,14 @@ class CustomerConfigurationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_customer_configuration
-      @customer_configuration = CustomerConfiguration.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_customer_configuration
+    @customer_config_active = 'active'
+    @customer_configuration = CustomerConfiguration.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def customer_configuration_params
-      params.require(:customer_configuration).permit(:customer_id, :dailySlaStart, :dailySlaEnd, :weeklySlaDays, :excludedDays)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def customer_configuration_params
+    params.require(:customer_configuration).permit(:customer_id, :dailySlaStart, :dailySlaEnd, :weeklySlaDays, :excludedDays)
+  end
 end
