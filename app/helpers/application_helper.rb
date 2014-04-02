@@ -25,7 +25,7 @@ module ApplicationHelper
     Rails.logger.debug 'Checking if Downtime already exists'
     #TODO extend check to include Customer (2 customers can have the same Dowmtimes theoretically...),when the Downtime -> Service -> Slaperday abstraction is
     #implemented check has to be extendended to service as well
-    if Downtime.check_if_downtime_exists(start_datetime, end_datetime).nil?
+    if Downtime.check_if_downtime_exists(start_datetime, end_datetime,sla_per_day.id).nil?
       downtime = Downtime.new
       Rails.logger.debug "Using sla_per_day with id: #{sla_per_day.id} for new Downtime"
       downtime.sla_per_day = sla_per_day
@@ -49,7 +49,7 @@ module ApplicationHelper
     }
 
     Rails.logger.debug "Trying to find Sla_per_day object for #{day} / #{month} / #{year}"
-    sla_per_month = SlaPerMonth.retrieve_by_month_and_year(month, year)
+    sla_per_month = SlaPerMonth.retrieve_by_month_and_year(month, year, customer.id)
     if sla_per_month.nil?
 
       Rails.logger.info 'no matching month object found creating new Month and day object'

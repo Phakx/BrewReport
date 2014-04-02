@@ -11,9 +11,9 @@ class Downtime < ActiveRecord::Base
     self.where('sla_per_day_id = ?', sla_per_day_id).to_a
   end
 
-  def self.check_if_downtime_exists(start_datetime, end_datetime)
+  def self.check_if_downtime_exists(start_datetime, end_datetime, sla_per_day_id)
     begin
-      self.where('start = ? AND end = ?', start_datetime, end_datetime).take!
+      self.where('start = ? AND end = ? AND sla_per_day_id = ?', start_datetime, end_datetime, sla_per_day_id).take!
     rescue
       return nil
     end
