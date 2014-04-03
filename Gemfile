@@ -6,11 +6,11 @@ gem 'rails', '4.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Use Less for stylesheets
+# Use sass for stylesheets
+gem 'sass-rails'
 #gem 'less-rails'
 
 gem 'nokogiri'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

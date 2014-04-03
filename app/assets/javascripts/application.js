@@ -12,5 +12,6 @@
 //
 //= require turbolinks
 //= require lib/jquery.min
-//= require plugins/menu
 //= require init
+//= require plugins/jquery.dataTables.min.js
+//= require plugins/menu

@@ -74,6 +74,12 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    sass (3.2.18)
+    sass-rails (4.0.2)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.0)
+      sprockets (~> 2.8, <= 2.11.0)
+      sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
@@ -110,6 +116,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   nokogiri
   rails (= 4.0.3)
+  sass-rails
   sdoc
   sqlite3
   turbolinks
