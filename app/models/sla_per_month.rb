@@ -6,8 +6,8 @@ class SlaPerMonth < ActiveRecord::Base
     self.where('customer_id = ?', customer).to_a
   end
 
-  def self.retrieve_by_month_and_year(month, year)
-    self.where('month = ? AND year = ?', month, year).take
+  def self.retrieve_by_month_and_year(month, year, customer_id)
+    self.where('month = ? AND year = ? AND customer_id = ?', month, year, customer_id).take
   end
 
 end
