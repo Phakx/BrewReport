@@ -42,6 +42,9 @@ GEM
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
+    jquery-turbolinks (2.0.2)
+      railties (>= 3.1.0)
+      turbolinks
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -114,6 +117,7 @@ PLATFORMS
 
 DEPENDENCIES
   jbuilder (~> 1.2)
+  jquery-turbolinks
   nokogiri
   rails (= 4.0.3)
   sass-rails

@@ -10,8 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
 //= require lib/jquery.min
+//= require jquery.turbolinks
 //= require init
 //= require plugins/jquery.dataTables.min.js
 //= require plugins/menu
+//= require turbolinks
