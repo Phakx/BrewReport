@@ -11,8 +11,23 @@
 // about supported directives.
 //
 //= require lib/jquery.min
+//= require lib/jquery.ui.core
+//= require lib/jquery.ui.datepicker
+//= require lib/prettify
+//= require lib/lang-css
 //= require jquery.turbolinks
 //= require init
 //= require plugins/jquery.dataTables.min.js
 //= require plugins/menu
+//= require plugins/jquery-ui.multidatespicker
+//= require customer_configurations
 //= require turbolinks
+jQuery.browser = {};
+(function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+        jQuery.browser.msie = true;
+        jQuery.browser.version = RegExp.$1;
+    }
+})();
