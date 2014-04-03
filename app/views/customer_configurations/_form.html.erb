@@ -35,7 +35,10 @@
     <div class="field">
       <%= f.label :excludedDays %>
       <br>
-      <%= f.text_field :excludedDays, {:class => 'datepicker'}%>
+      <div id="datepicker"></div>
+      <br />
+
+      <%= f.text_field :excludedDays, {:id => 'altField', :readonly => true}%>
     </div>
     <div class="actions">
       <%= f.submit %>
