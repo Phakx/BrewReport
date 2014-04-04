@@ -22,6 +22,8 @@
 //= require plugins/jquery-ui.multidatespicker
 //= require customer_configurations
 //= require turbolinks
+
+//Multidate Picker fix (relies on old jquery behaviour which is no longer available)
 jQuery.browser = {};
 (function () {
     jQuery.browser.msie = false;
