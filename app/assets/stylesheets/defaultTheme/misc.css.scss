@@ -69,7 +69,17 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-
+select {
+  background: transparent url(sort_both.png) no-repeat right;
+  width: 150px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid;
+  border-radius: 5px;
+  height: 34px;
+  -webkit-appearance: none;
+}
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
