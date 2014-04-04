@@ -1,6 +1,6 @@
 class Downtime < ActiveRecord::Base
   belongs_to :sla_per_day
-
+  validates :sla_per_day_id, presence: true
   def difference
     #Downtime Length in Minutes
     Rails.logger.debug "Starttime: #{self.start}, Endtime: #{self.end}, Comment was: #{self.comment}"
