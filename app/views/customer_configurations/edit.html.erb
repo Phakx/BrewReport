@@ -3,4 +3,4 @@
 <%= render 'form' %>
 <br/>
 <%= link_to 'Show', @customer_configuration, class: 'button' %>
-<%= link_to 'Back', customer_configurations_path, class: 'button' %>
+<%= link_to_function 'Back', "history.back()", class: 'button' %>
