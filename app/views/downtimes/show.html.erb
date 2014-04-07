@@ -1,29 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Start:</strong>
-  <%= @downtime.start %>
-</p>
+<h1>Showing configuration for Downtime </h1>
+<dl class="show_container">
 
-<p>
-  <strong>Downtimetype:</strong>
-  <%= @downtime.downtime_type %>
-</p>
+  <dt><strong>Start:</strong></dt>
+  <dd><%= @downtime.start %></dd>
+  <dt><strong>End:</strong></dt>
+  <dd>  <%= @downtime.end %></dd>
+  <dt><strong>Downtime type:</strong></dt>
+  <dd>  <%=@downtime.downtime_type %></dd>
+  <dt><strong>Comment:</strong></dt>
+  <dd>    <%= @downtime.comment %></dd>
 
-<p>
-  <strong>End:</strong>
-  <%= @downtime.end %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @downtime.comment %>
-</p>
-
-<p>
-  <strong>Sla Per Day:</strong>
-  <%= @downtime.sla_per_day_id %>
-</p>
-
-<%= link_to 'Edit', edit_downtime_path(@downtime) %> |
+</dl>
+<%= link_to 'Edit', edit_downtime_path(@downtime), class: 'button' %>
 <%= link_to_function 'Back', "history.back()", class: 'button' %>
