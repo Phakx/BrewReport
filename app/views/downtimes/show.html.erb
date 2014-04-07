@@ -26,4 +26,4 @@
 </p>
 
 <%= link_to 'Edit', edit_downtime_path(@downtime) %> |
-<%= link_to 'Back', downtimes_path %>
+<%= link_to_function 'Back', "history.back()", class: 'button' %>

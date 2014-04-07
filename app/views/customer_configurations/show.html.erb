@@ -1,29 +1,18 @@
 <p id="notice"><%= notice %></p>
+<dl>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @customer_configuration.customer_id %>
-</p>
+  <dt><strong>Customer:</strong></dt>
+  <dd><%= link_to @customer_configuration.customer.name, @customer_configuration.customer %></dd>
+  <dt><strong>Dailyslastart:</strong></dt>
+  <dd>  <%= @customer_configuration.dailySlaStart.strftime('%H:%M:%S') %></dd>
+  <dt><strong>Dailyslaend:</strong></dt>
+  <dd>  <%= @customer_configuration.dailySlaEnd.strftime('%H:%M:%S') %></dd>
+  <dt><strong>Weeklysladays:</strong></dt>
+  <dd>    <%= @customer_configuration.weeklySlaDays %></dd>
+  <dt><strong>Excludeddays:</strong></dt>
+  <dd>  <%= @customer_configuration.excludedDays %></dd>
 
-<p>
-  <strong>Dailyslastart:</strong>
-  <%= @customer_configuration.dailySlaStart.strftime('%H:%M:%S') %>
-</p>
+</dl>
 
-<p>
-  <strong>Dailyslaend:</strong>
-  <%= @customer_configuration.dailySlaEnd.strftime('%H:%M:%S') %>
-</p>
-
-<p>
-  <strong>Weeklysladays:</strong>
-  <%= @customer_configuration.weeklySlaDays %>
-</p>
-
-<p>
-  <strong>Excludeddays:</strong>
-  <%= @customer_configuration.excludedDays %>
-</p>
-
-<%= link_to 'Edit', edit_customer_configuration_path(@customer_configuration) %> |
-<%= link_to 'Back', customer_configurations_path %>
+<%= link_to 'Edit', edit_customer_configuration_path(@customer_configuration), class: 'button' %>
+<%= link_to_function 'Back', "history.back()", class: 'button' %>
