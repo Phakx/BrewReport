@@ -15,7 +15,7 @@ gem 'nokogiri'
 gem 'uglifier', '>= 1.3.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-
+gem 'pg'
 #gem 'therubyracer', platforms: :ruby
 
 
@@ -42,3 +42,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'rails_12factor', group: :production
