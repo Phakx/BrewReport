@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
-
+<h1>Showing configuration for <%= @customer.name %></h1>
+<dl class="show_container">
+  <dt><strong>Customer:</strong></dt>
+  <dd> <%= @customer.name %></dd>
+</dl>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to_function 'Back', "history.back()", class: 'button' %>

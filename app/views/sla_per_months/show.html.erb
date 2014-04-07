@@ -1,26 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Month:</strong>
-  <%= @sla_per_month.month %>
-</p>
+<h1>Showing Monthly Report</h1>
+<dl class="show_container">
 
-<p>
-  <strong>Year:</strong>
-  <%= @sla_per_month.year %>
-</p>
-
-<p>
-  <strong>Customer:</strong>
-  <%= @sla_per_month.customer.name %>
-</p>
-<p>
-  <strong>MONTHLY INFO:</strong><br>
-  RANDOM DOWNTIME NUMBER:<%= @downtime_info.downtime_in_seconds %>
-  <br>
-  RANDOM AVAIL NUMBER: <%= @downtime_info.configured_availability %>
-  <br>
-  PERCENTAGE: <%= (1  - @downtime_info.downtime_in_seconds / @downtime_info.configured_availability) * 100  %>
-</p>
-<%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month) %> |
-<%= link_to 'Back', sla_per_months_path %>
+  <dt><strong>Month:</strong></dt>
+  <dd><%= @sla_per_month.month %></dd>
+  <dt><strong>Year:</strong></dt>
+  <dd>  <%= @sla_per_month.year %></dd>
+  <dt><strong>Customer:</strong></dt>
+  <dd>  <%= @sla_per_month.customer.name %></dd>
+  <dt><strong>Unplanned Downtime in seconds:</strong></dt>
+  <dd>    <%= @downtime_info.downtime_in_seconds %></dd>
+  <dt><strong>General Availability in Seconds</strong></dt>
+  <dd>    <%= @downtime_info.configured_availability %></dd>
+  <dt><strong>SLA Percentage:</strong></dt>
+  <dd>    <%= @downtime_info.get_availability_in_percent  %></dd>
+</dl>
+<%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month), class: 'button' %>
+<%= link_to 'Back', sla_per_months_path, class: 'button' %>

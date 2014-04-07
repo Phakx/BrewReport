@@ -2,7 +2,7 @@
 <%= form_for(@customer_configuration) do |f| %>
     <% if @customer_configuration.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@customer_configuration.errors.count, "error") %> prohibited this customer_configuration
+          <h2><%= pluralize(@customer_configuration.errors.count, 'error') %> prohibited this customer_configuration
             from being saved:</h2>
 
           <ul>

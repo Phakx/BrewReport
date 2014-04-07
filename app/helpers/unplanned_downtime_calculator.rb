@@ -1,4 +1,4 @@
-class SlaCalculator
+class UnplannedDowntimeCalculator
   TIME_CONVERSION = '%H%M'
 
   def initialize(customer)

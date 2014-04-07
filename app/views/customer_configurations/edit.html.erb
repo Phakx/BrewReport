@@ -1,6 +1,6 @@
 <h1>Editing customer_configuration</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @customer_configuration %> |
-<%= link_to 'Back', customer_configurations_path %>
+<br/>
+<%= link_to 'Show', @customer_configuration, class: 'button' %>
+<%= link_to_function 'Back', "history.back()", class: 'button' %>
