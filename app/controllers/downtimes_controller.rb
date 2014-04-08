@@ -1,4 +1,5 @@
 class DowntimesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_downtime, only: [:show, :edit, :update, :destroy]
 
   # GET /downtimes

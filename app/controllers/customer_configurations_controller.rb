@@ -1,4 +1,5 @@
 class CustomerConfigurationsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_customer_configuration, only: [:show, :edit, :update, :destroy]
 
   # GET /customer_configurations

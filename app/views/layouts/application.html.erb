@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>BrewReport</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,15 +10,26 @@
 <% Time.zone = 'Berlin' %>
 
 <div class="content">
-  <div class="wrapper">
-    <div class="container"><ul id="menu" class="menu" rel="sam1">
-      <li class="menu_item <%= @customer_active %>"><%= link_to 'Customer', customers_path %></li>
-      <li class="menu_item <%= @customer_config_active %>"><%= link_to 'Configuration', customer_configurations_path %></li>
-      <li class="menu_item <%= @slapm_active %>"><%= link_to 'Monthly reports', sla_per_months_path %></li>
-      <li class="menu_item <%= @downtime_active %>"><%= link_to 'Downtimes', downtimes_path %></li>
-    </ul>
-    </div>
-  </div>
+  <% if user_signed_in? %>
+
+      <div class="wrapper">
+        <div class="user_info">
+          Logged in as: <%= current_user.email %>
+        </div>
+        <div class="container">
+          <ul id="menu" class="menu" rel="sam1">
+            <li class="menu_item <%= @customer_active %>"><%= link_to 'Customer', customers_path %></li>
+            <li class="menu_item <%= @customer_config_active %>"><%= link_to 'Configuration', customer_configurations_path %></li>
+            <li class="menu_item <%= @slapm_active %>"><%= link_to 'Monthly reports', sla_per_months_path %></li>
+            <li class="menu_item <%= @downtime_active %>"><%= link_to 'Downtimes', downtimes_path %></li>
+            <li class="menu_item left"><%= link_to 'Logout', '/sign_out' %></li>
+          </ul>
+        </div>
+      </div>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+
+  <p class="alert"><%= alert %></p>
   <%= yield %>
 </div>
 

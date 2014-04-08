@@ -1,4 +1,5 @@
 class SlaPerMonthsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_sla_per_month, only: [:show, :edit, :update, :destroy]
 
   # GET /sla_per_months

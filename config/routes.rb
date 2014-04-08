@@ -1,4 +1,5 @@
 BrewReport::Application.routes.draw do
+  devise_for :users
   resources :customer_configurations
 
   resources :sla_per_months
@@ -6,7 +7,10 @@ BrewReport::Application.routes.draw do
   resources :customers
 
   resources :downtimes
-
+  devise_scope :user do
+    root to: "devise/sessions#new"
+    get "sign_out", to: "devise/sessions#destroy"
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -26,6 +26,11 @@ ul.menu li {
     background: #fff;
 }
 
+ul.menu li.left{
+  position: absolute;
+  right: 20px;
+}
+
 ul li a {
     display: block;
     padding: 0 20px;

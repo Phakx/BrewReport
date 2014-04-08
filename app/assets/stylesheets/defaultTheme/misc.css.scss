@@ -2,7 +2,13 @@ body {
   color: #333;
   background: #111111 url(ui-bg_gloss-wave_20_111111_500x100.png) 50% top repeat-x;
 }
-
+.user_info{
+  position: absolute;
+  color: #ffffff;
+  right: 6%;
+  height: 10px;
+  width: 350px;
+}
 .content {
   width: 80%;
   margin: 0 auto;
