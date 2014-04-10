@@ -2,10 +2,18 @@ module ApplicationHelper
 
   require 'open-uri'
   require 'nokogiri'
+  require 'openssl'
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   def self.import_downtimes_from_icinga(url, username, password, customer)
     Rails.logger.debug 'Begin Fetching Icinga SLA Report'
-    xml = Nokogiri::XML(open(url, :http_basic_authentication => [username, password])) do |config|
+    uri = URI.parse(url)
+    begin
+      unparsed_xml = open(uri, :http_basic_authentication => [username, password])
+    rescue => e
+      Rails.logger.debug e.message
+    end
+    xml = Nokogiri::XML(unparsed_xml) do |config|
       config.strict.nonet
     end
     #xml = Nokogiri::XML(open('test/helpers/sampleReport.xml'))

@@ -1,0 +1,26 @@
+<%= form_tag(controller: 'icinga_importer', action: 'create') %>
+
+    <div class="field">
+      <%= label_tag 'Icinga URL' %>
+      <br>
+      <%= url_field(:import_helper, :url) %>
+    </div>
+    <div class="field">
+      <%= label_tag(:username, 'Username') %>
+      <br>
+      <%= text_field(:import_helper, :username) %>
+    </div>
+    <div class="field">
+      <%= label_tag(:password, 'Password') %>
+      <br>
+      <%= password_field(:import_helper, :password) %>
+    </div>
+    <div class="field">
+      <%= label_tag 'Customers' %>
+      <br>
+      <%= select(:import_helper, :customer_name, options_from_collection_for_select(@customers_all, :id, :name)) %>
+    </div>
+
+    <div class="actions">
+      <%= submit_tag('Import') %>
+    </div>

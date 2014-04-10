@@ -1,4 +1,8 @@
 BrewReport::Application.routes.draw do
+  get "icinga_importer/new"
+  get "icinga_importer/create"
+
+  post 'icinga_importer/create', to:'icinga_importer#create'
   devise_for :users
   resources :customer_configurations
 

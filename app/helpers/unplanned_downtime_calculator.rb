@@ -50,6 +50,7 @@ class UnplannedDowntimeCalculator
   end
 
   def get_effective_downtime_for_day(sla_per_day)
+    Rails.logger.debug "#{sla_per_day}"
     all_downtimes_by_day = Downtime.retrieve_all_by_day(sla_per_day)
     daily_sla_start = @customer_config.dailySlaStart
     daily_sla_end = @customer_config.dailySlaEnd
