@@ -1,7 +1,7 @@
 class SlaPerMonth < ActiveRecord::Base
   belongs_to :customer
   has_many :sla_per_days
-  validates :customer_id, presence: true
+  validates :customer, presence: true
   def self.retrieve_all_by_customer(customer)
     self.where('customer_id = ?', customer).to_a
   end

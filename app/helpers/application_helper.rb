@@ -8,8 +8,10 @@ module ApplicationHelper
   def self.import_downtimes_from_icinga(url, username, password, customer)
     Rails.logger.debug 'Begin Fetching Icinga SLA Report'
     uri = URI.parse(url)
+    Rails.logger.debug "URI IS: #{uri}"
     begin
-      unparsed_xml = open(uri, :http_basic_authentication => [username, password])
+      unparsed_xml = open(uri.to_s, :http_basic_authentication => [username, password])
+      Rails.logger.debug "unparsed xml: #{unparsed_xml}"
     rescue => e
       Rails.logger.debug e.message
     end
@@ -56,7 +58,7 @@ module ApplicationHelper
       return daily_sla
     }
 
-    Rails.logger.debug "Trying to find Sla_per_day object for #{day} / #{month} / #{year}"
+    Rails.logger.debug "Trying to find Sla_per_day object for #{day} / #{month} / #{year} // #{customer}"
     sla_per_month = SlaPerMonth.retrieve_by_month_and_year(month, year, customer.id)
     if sla_per_month.nil?
 
@@ -69,6 +71,7 @@ module ApplicationHelper
       if sla_per_month_new.save
         return sla_per_day.call(sla_per_month_new)
       else
+        Rails.logger.error(sla_per_month_new.errors.inspect)
         Rails.logger.error 'Persisting Object to Database failed'
         return nil
       end

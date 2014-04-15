@@ -6,7 +6,7 @@ class DowntimesController < ApplicationController
   # GET /downtimes.json
   def index
     @downtime_active = 'active'
-    @downtimes = Downtime.all
+    @downtimes = Downtime.includes(sla_per_day:[{sla_per_month:[:customer]}]).to_a
   end
 
   # GET /downtimes/1
