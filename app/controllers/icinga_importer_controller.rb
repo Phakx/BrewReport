@@ -18,6 +18,7 @@ class IcingaImporterController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def prepare_action
+    @impoter_active = 'active'
     Rails.logger.debug 'Initializing Import helper'
     @customers_all = Customer.all
 

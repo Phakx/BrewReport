@@ -14,6 +14,7 @@ class SlaPerMonthsController < ApplicationController
   def show
     sla_calculator = UnplannedDowntimeCalculator.new(@sla_per_month.customer)
     @downtime_info = sla_calculator.populate_monthly_sla_for(@sla_per_month)
+    @critical_downtimes = sla_calculator.get_all_critical_downtimes_for(@sla_per_month)
   end
 
   # GET /sla_per_months/new

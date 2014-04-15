@@ -15,6 +15,8 @@
   <dd>    <%= @downtime_info.configured_availability %></dd>
   <dt><strong>SLA Percentage:</strong></dt>
   <dd>    <%= @downtime_info.get_availability_in_percent  %></dd>
+  <dt><strong>Downtimes:</strong></dt>
+  <dd>    <%= @critical_downtimes  %></dd>
 </dl>
 <%= link_to 'Edit', edit_sla_per_month_path(@sla_per_month), class: 'button' %>
 <%= link_to 'Back', sla_per_months_path, class: 'button' %>
