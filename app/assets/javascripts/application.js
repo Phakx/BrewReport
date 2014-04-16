@@ -14,6 +14,10 @@
 //= require lib/jquery.ui.core
 //= require lib/jquery.ui.datepicker
 //= require lib/prettify
+//= require lib/jquery.dropotron.min
+//= require lib/html5shiv
+//= require lib/skel.min
+//= require lib/skel-panels.min
 //= require lib/lang-css
 //= require jquery.turbolinks
 //= require init
@@ -21,7 +25,9 @@
 //= require plugins/menu
 //= require plugins/jquery-ui.multidatespicker
 //= require customer_configurations
+//= require config
 //= require turbolinks
+
 
 //Multidate Picker fix (relies on old jquery behaviour which is no longer available)
 jQuery.browser = {};

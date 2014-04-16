@@ -6,33 +6,247 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="no-sidebar">
+
+<!-- Header Wrapper -->
+
+<div id="header-wrapper" class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+
+        <!-- Header -->
+        <div id="header">
+
+          <!-- Logo -->
+          <div id="logo">
+            <h1><a href="#">BrewReport</a></h1>
+          </div>
+          <!-- /Logo -->
+              <!-- Nav -->
+              <nav id="nav">
+                <ul>
+                  <li><%= link_to 'Customer', customers_path %></li>
+                  <li><%= link_to 'Configuration', customer_configurations_path %></li>
+                  <li><%= link_to 'Monthly reports', sla_per_months_path %></li>
+                  <li><%= link_to 'Downtimes', downtimes_path %></li>
+                  <li><%= link_to 'HTTP Importer', icinga_importer_new_path %></li>
+                  <li><%= link_to 'Logout', '/sign_out' %></li>
+                </ul>
+              </nav>
+              <!-- /Nav -->
+        </div>
+        <!-- /Header -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /Header Wrapper -->
 <% Time.zone = 'Berlin' %>
 
-<div class="content">
-  <% if user_signed_in? %>
+<!-- Main Wrapper -->
+<div class="wrapper wrapper-style2">
+  <div class="title">No Sidebar</div>
+  <div class="container">
+    <div class="row">
+      <div class="12u">
 
-      <div class="wrapper">
-        <div class="user_info">
-          Logged in as: <%= current_user.email %>
+        <!-- Main -->
+        <div id="main">
+          <div>
+            <div class="row">
+              <div class="12u skel-cell-important">
+
+                <!-- Content -->
+                <div id="content">
+                  <article class="is is-post">
+
+                    <%= yield %>
+
+                  </article>
+
+                </div>
+                <!-- /Content -->
+
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container">
-          <ul id="menu" class="menu" rel="sam1">
-            <li class="menu_item <%= @customer_active %>"><%= link_to 'Customer', customers_path %></li>
-            <li class="menu_item <%= @customer_config_active %>"><%= link_to 'Configuration', customer_configurations_path %></li>
-            <li class="menu_item <%= @slapm_active %>"><%= link_to 'Monthly reports', sla_per_months_path %></li>
-            <li class="menu_item <%= @downtime_active %>"><%= link_to 'Downtimes', downtimes_path %></li>
-            <li class="menu_item <%= @impoter_active %>"><%= link_to 'HTTP Importer', icinga_importer_new_path %></li>
-            <li class="menu_item left"><%= link_to 'Logout', '/sign_out' %></li>
-          </ul>
-        </div>
+        <!-- /Main -->
+
       </div>
-  <% end %>
-  <p class="notice"><%= notice %></p>
-
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+    </div>
+  </div>
 </div>
+<!-- /Main Wrapper -->
+
+<!-- Highlights Wrapper -->
+<div class="wrapper wrapper-style3">
+  <div class="title">The Endorsements</div>
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+
+        <!-- Highlights -->
+        <div id="highlights">
+          <div>
+            <div class="row">
+              <div class="4u">
+                <section class="highlight highlight-one">
+
+                </section>
+              </div>
+              <div class="4u">
+                <section class="highlight highlight-two">
+
+                </section>
+              </div>
+              <div class="4u">
+                <section class="highlight highlight-three">
+
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Highlights -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Highlights Wrapper -->
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper" class="wrapper">
+  <div class="title">The Rest Of It</div>
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+
+        <!-- Footer -->
+        <div id="footer">
+          <header class="style1">
+            <h2>Ipsum sapien elementum portitor?</h2>
+
+            <p class="byline">
+              Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br/>
+              Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+            </p>
+          </header>
+          <hr/>
+          <div>
+            <div class="row">
+              <div class="6u">
+
+                <!-- Contact Form -->
+                <section class="footer-one">
+                  <form method="post" action="#">
+                    <div>
+                      <div class="row half">
+                        <div class="6u">
+                          <input type="text" class="text" name="name" id="contact-name" placeholder="Name"/>
+                        </div>
+                        <div class="6u">
+                          <input type="text" class="text" name="name" id="contact-email" placeholder="Email"/>
+                        </div>
+                      </div>
+                      <div class="row half">
+                        <div class="12u">
+                          <textarea name="message" id="contact-message" placeholder="Message"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="12u">
+                          <ul class="actions">
+                            <li><input type="submit" class="button button-style1" value="Send"/></li>
+                            <li><input type="reset" class="button button-style2" value="Reset"/></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </section>
+                <!-- /Contact Form -->
+
+              </div>
+              <div class="6u">
+
+                <!-- Contacts -->
+                <section class="footer-two">
+                  <div class="feature-list feature-list-small">
+                    <div>
+                      <div class="row">
+                        <div class="6u">
+                          <section>
+                            <h3 class="fa fa-home">Mailing Address</h3>
+
+                            <p>
+                              Untitled Corporation<br/>
+                              1234 Somewhere Rd #987<br/>
+                              Nashville, TN 00000-0000
+                            </p>
+                          </section>
+                        </div>
+                        <div class="6u">
+                          <section>
+                            <h3 class="fa fa-comment">Social</h3>
+
+                            <p>
+                              <a href="http://twitter.com/n33co">@n33co</a><br/>
+                              <a href="http://dribbble.com/n33">dribbble.com/n33</a><br/>
+                              <a href="#">facebook.com/untitled</a><br/>
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="6u">
+                          <section>
+                            <h3 class="fa fa-envelope">Email</h3>
+
+                            <p>
+                              <a href="#">info@untitled.tld</a>
+                            </p>
+                          </section>
+                        </div>
+                        <div class="6u">
+                          <section>
+                            <h3 class="fa fa-phone">Phone</h3>
+
+                            <p>
+                              (000) 555-0000
+                            </p>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- /Contacts -->
+
+              </div>
+            </div>
+          </div>
+          <hr/>
+        </div>
+        <!-- /Footer -->
+
+        <!-- Copyright -->
+        <div id="copyright">
+									<span>
+										&copy; Untitled. Design by <a href="http://html5up.net/">HTML5 UP</a>.
+									</span>
+        </div>
+        <!-- /Copyright -->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Footer Wrapper -->
 
 </body>
 </html>
