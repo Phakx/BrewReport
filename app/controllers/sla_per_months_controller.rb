@@ -4,7 +4,10 @@ class SlaPerMonthsController < ApplicationController
 
   # GET /sla_per_months
   # GET /sla_per_months.json
+  TITLE = 'Monthly Reports'
+
   def index
+    @title = TITLE
     @slapm_active = 'active'
     @sla_per_months = SlaPerMonth.all
   end
@@ -69,6 +72,7 @@ class SlaPerMonthsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sla_per_month
+      @title = TITLE
       @slapm_active = 'active'
       @sla_per_month = SlaPerMonth.find(params[:id])
     end

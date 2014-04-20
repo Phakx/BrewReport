@@ -4,7 +4,10 @@ class CustomerConfigurationsController < ApplicationController
 
   # GET /customer_configurations
   # GET /customer_configurations.json
+  TITLE = 'Customer Configuration'
+
   def index
+    @title = TITLE
     @customer_config_active = 'active'
     @customer_configurations = CustomerConfiguration.all
   end
@@ -67,6 +70,7 @@ class CustomerConfigurationsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_customer_configuration
     @customer_config_active = 'active'
+    @title = TITLE
     @customer_configuration = CustomerConfiguration.find(params[:id])
   end
 

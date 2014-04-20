@@ -4,7 +4,10 @@ class DowntimesController < ApplicationController
 
   # GET /downtimes
   # GET /downtimes.json
+  TITLE = 'Downtimes'
+
   def index
+    @title = TITLE
     @downtime_active = 'active'
     @downtimes = Downtime.includes(sla_per_day:[{sla_per_month:[:customer]}]).to_a
   end
@@ -66,6 +69,7 @@ class DowntimesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_downtime
+      @title = TITLE
       @downtime_active = 'active'
       @downtime = Downtime.find(params[:id])
     end
