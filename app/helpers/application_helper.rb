@@ -18,7 +18,6 @@ module ApplicationHelper
     xml = Nokogiri::XML(unparsed_xml) do |config|
       config.strict.nonet
     end
-    #xml = Nokogiri::XML(open('test/helpers/sampleReport.xml'))
     Rails.logger.info 'Fetched XML starting to parse'
     log_entries = xml.xpath('//log_entry')
     Rails.logger.debug "Found #{log_entries.size} Log entries"
