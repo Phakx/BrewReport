@@ -17,12 +17,13 @@
   <dd>    <%= @downtime_info.get_availability_in_percent %></dd>
   <dt><strong>Downtimes:</strong></dt>
   <dd>
-    <dl>
+    <dl class="reportList">
       <% @critical_downtimes.each do |critical| %>
-      <dt>Ciritical Downtime:</dt>
+      <dt><%= link_to 'Ciritical Downtime:', critical %></dt>
           <dd>From: <%= critical.start %></dd>
           <dd>To:   <%= critical.end %></dd>
           <dd>Comment: <%= critical.comment %></dd>
+          <dd>Duration: <%= critical.difference %></dd>
       <% end %>
     </dl>
 

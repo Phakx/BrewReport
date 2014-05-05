@@ -71,13 +71,13 @@ class UnplannedDowntimeCalculator
       Rails.logger.debug "Downtime start is : #{downtime.start.strftime(TIME_CONVERSION)}, Daily SLA start is: #{daily_sla_start.strftime(TIME_CONVERSION)}, Setting start to boundary if necessary"
       sla_start_is_before_downtime_start = daily_sla_start.strftime(TIME_CONVERSION) < downtime.start.strftime(TIME_CONVERSION)
       unless sla_start_is_before_downtime_start
-        downtime.start = downtime.start.change({:hour => daily_sla_start.hour, :minute => daily_sla_start.minute})
+        downtime.start = downtime.start.change({:hour => daily_sla_start.hour, :min => daily_sla_start.min})
       end
 
       Rails.logger.debug "Downtime end is : #{downtime.end.strftime(TIME_CONVERSION)}, Daily SLA end is: #{daily_sla_end.strftime(TIME_CONVERSION)}, Setting end to boundary if necessary"
       sla_end_is_after_downtime_end = daily_sla_end.strftime(TIME_CONVERSION) > downtime.end.strftime(TIME_CONVERSION)
       unless sla_end_is_after_downtime_end
-        downtime.end = downtime.end.change({:hour => daily_sla_end.hour, :minute => daily_sla_end.minute})
+        downtime.end = downtime.end.change({:hour => daily_sla_end.hour, :min => daily_sla_end.min})
       end
       Rails.logger.debug "Returning: #{downtime}"
       return downtime
