@@ -61,13 +61,12 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
+    mysql2 (0.3.15)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.1-x86-mingw32)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
-    pg (0.17.1)
-    pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -137,8 +136,8 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-turbolinks
+  mysql2
   nokogiri
-  pg
   rails (= 4.0.3)
   rails_12factor
   sass-rails
