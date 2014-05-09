@@ -3,6 +3,7 @@ module ApplicationHelper
   require 'open-uri'
   require 'nokogiri'
   require 'openssl'
+  require 'fileutils'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   def self.import_downtimes_from_icinga(url, username, password, customer)
@@ -12,6 +13,8 @@ module ApplicationHelper
     begin
       unparsed_xml = open(uri.to_s, :http_basic_authentication => [username, password])
       Rails.logger.debug "unparsed xml: #{unparsed_xml}"
+
+      archive_import_file(customer, unparsed_xml)
     rescue => e
       Rails.logger.debug e.message
     end
@@ -25,6 +28,15 @@ module ApplicationHelper
       Rails.logger.debug 'Creating new Downtime object'
       create_new_downtime(entry, customer)
     end
+  end
+
+  def self.archive_import_file(customer, unparsed_xml)
+    file_path = "imports/#{customer.name}/#{Time.now}.xml"
+    dirname = File.dirname(file_path)
+    unless File.directory?(dirname)
+      FileUtils.mkdir_p(dirname)
+    end
+    FileUtils.cp(unparsed_xml, file_path)
   end
 
   def self.create_new_downtime(entry, customer)
