@@ -56,7 +56,7 @@ module ApplicationHelper
       downtime.comment = entry.xpath('state_information').text
       downtime.save
     else
-      Rails.logger.debug("Downtime for #{start_datetime}  till   #{end_datetime}   already exists:")
+      Rails.logger.debug "Downtime for #{start_datetime}  till   #{end_datetime}   already exists:"
     end
   end
 

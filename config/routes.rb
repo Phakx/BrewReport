@@ -1,4 +1,5 @@
 BrewReport::Application.routes.draw do
+  get "import_archive/list"
   get "icinga_importer/new"
   get "icinga_importer/create"
 
