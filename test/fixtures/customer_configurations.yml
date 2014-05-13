@@ -2,14 +2,14 @@
 
 one:
   customer_id: 1
-  dailySlaStart: 6
-  dailySlaEnd: 22
-  weeklySlaDays: [0,1,2,3,4,5]
+  dailySlaStart: 2014-05-05 06:00:00.000000
+  dailySlaEnd: 2014-05-05 22:00:00.000000
+  weeklySlaDays: [1,2,3,4,5,6]
   excludedDays: 
 
 two:
   customer_id: 2
-  dailySlaStart: 5
-  dailySlaEnd: 23
-  weeklySlaDays: [0,1,2,3,4,5]
+  dailySlaStart: 2014-05-05 06:00:00.000000
+  dailySlaEnd: 2014-05-05 22:00:00.000000
+  weeklySlaDays: [1,2,3,4,5,6]
   excludedDays: 

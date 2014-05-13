@@ -8,7 +8,6 @@ class SlaPerMonthsController < ApplicationController
 
   def index
     @title = TITLE
-    @slapm_active = 'active'
     @sla_per_months = SlaPerMonth.all
   end
 
@@ -73,7 +72,6 @@ class SlaPerMonthsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_sla_per_month
       @title = TITLE
-      @slapm_active = 'active'
       @sla_per_month = SlaPerMonth.find(params[:id])
     end
 

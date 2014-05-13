@@ -10,6 +10,6 @@ one:
 two:
   start: 2014-01-02 10:44:09
   downtimeType: OK
-  end: 2014-01-01 10:49:09
+  end: 2014-01-02 10:49:09
   comment: some other Comment
   sla_per_day_id: 2

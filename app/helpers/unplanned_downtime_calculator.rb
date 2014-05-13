@@ -7,7 +7,7 @@ class UnplannedDowntimeCalculator
   end
 
   def populate_monthly_sla_for(month)
-    spds = month.sla_per_days
+    days_in_month = month.sla_per_days
     monthly_downtime_in_seconds = 0
     special_exclude_days = []
     int_array = []
@@ -21,11 +21,11 @@ class UnplannedDowntimeCalculator
     day_is_in_conf_weekly_and_not_excluded =lambda { |day_to_check|
       int_array.include?(day_to_check.wday) && !special_exclude_days.include?(day_to_check)
     }
-    spds.each do |spd|
+    days_in_month.each do |day_in_month|
 
-      t = DateTime.new(month.year.to_i, month.month.to_i, spd.day.to_i)
-      if day_is_in_conf_weekly_and_not_excluded.call(t)
-        monthly_downtime_in_seconds += get_effective_downtime_for_day(spd)
+      day_as_datetime = DateTime.new(month.year.to_i, month.month.to_i, day_in_month.day.to_i)
+      if day_is_in_conf_weekly_and_not_excluded.call(day_as_datetime)
+        monthly_downtime_in_seconds += get_effective_downtime_for_day(day_in_month)
       end
 
     end
@@ -37,8 +37,8 @@ class UnplannedDowntimeCalculator
       days_in_month
     }
     seconds = @customer_config.get_availablility_in_seconds * available_days_in_month.call
-    monthly_downtime_info.configured_availability = seconds
 
+    monthly_downtime_info.configured_availability = seconds
     monthly_downtime_info.downtime_in_seconds = monthly_downtime_in_seconds
     monthly_downtime_info
   end
