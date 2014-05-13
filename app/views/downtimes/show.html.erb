@@ -15,3 +15,4 @@
 </dl>
 <%= link_to 'Edit', edit_downtime_path(@downtime), class: 'button' %>
 <%= link_to_function 'Back', "history.back()", class: 'button' %>
+<%= link_to 'Destroy', @downtime, :method => :delete, data: { confirm: 'Are you sure?' }, class:'button' %>
