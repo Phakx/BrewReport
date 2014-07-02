@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140408111002) do
 
   create_table "downtimes", force: true do |t|
     t.datetime "start"
-    t.string   "downtimeType"
+    t.string   "downtime_type"
     t.datetime "end"
     t.string   "comment"
     t.integer  "sla_per_day_id"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140408111002) do
   end
 
   create_table "sla_per_months", force: true do |t|
-    t.string   "month"
+    t.integer  "month"
     t.integer  "year"
     t.integer  "customer_id"
     t.datetime "created_at"
