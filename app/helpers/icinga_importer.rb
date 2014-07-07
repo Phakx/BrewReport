@@ -33,6 +33,15 @@ class IcingaImporter
     unparsed_xml
   end
 
+  def archive_import_file(unparsed_xml)
+    file_path = "imports/#{@customer.name}/#{Time.now}.xml"
+    dirname = File.dirname(file_path)
+    unless File.directory?(dirname)
+      FileUtils.mkdir_p(dirname)
+    end
+    FileUtils.cp(unparsed_xml, file_path)
+  end
+
   def process_log_entries(xml)
     Rails.logger.info 'Fetched XML starting to parse'
     log_entries = xml.xpath('//log_entry')
@@ -43,14 +52,6 @@ class IcingaImporter
     end
   end
 
-  def archive_import_file(unparsed_xml)
-    file_path = "imports/#{@customer.name}/#{Time.now}.xml"
-    dirname = File.dirname(file_path)
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
-    end
-    FileUtils.cp(unparsed_xml, file_path)
-  end
 
   def create_new_downtime_for(entry)
     start_datetime = Time.at(entry.xpath('start_time_timestamp').text.to_i).to_datetime
@@ -85,19 +86,15 @@ class IcingaImporter
     Rails.logger.debug "Trying to find Sla_per_day object for #{day} / #{month} / #{year} // #{@customer}"
     sla_per_month = SlaPerMonth.retrieve_by_month_and_year(month, year, @customer.id)
     if sla_per_month.nil?
-      create_new_sla_per_month(create_sla_per_day, month, year)
+      create_new_sla_per_month_with_new_spd(create_sla_per_day, month, year)
     else
       fetch_sla_per_day(create_sla_per_day, day, sla_per_month)
     end
 
   end
 
-  def create_new_sla_per_month(create_sla_per_day, month, year)
-    Rails.logger.info 'no matching month object found creating new Month and day object'
-    sla_per_month_new = SlaPerMonth.new
-    sla_per_month_new.month= month
-    sla_per_month_new.year = year
-    sla_per_month_new.customer = @customer
+  def create_new_sla_per_month_with_new_spd(create_sla_per_day, month, year)
+    sla_per_month_new = create_new_spm(month, year)
 
     if sla_per_month_new.save
       create_sla_per_day.call(sla_per_month_new)
@@ -106,6 +103,15 @@ class IcingaImporter
       Rails.logger.error 'Persisting Object to Database failed'
       nil
     end
+  end
+
+  def create_new_spm(month, year)
+    Rails.logger.info 'no matching month object found creating new Month and day object'
+    sla_per_month_new = SlaPerMonth.new
+    sla_per_month_new.month= month
+    sla_per_month_new.year = year
+    sla_per_month_new.customer = @customer
+    sla_per_month_new
   end
 
   def fetch_sla_per_day(create_sla_per_day, day, sla_per_month)
