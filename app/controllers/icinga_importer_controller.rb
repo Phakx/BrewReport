@@ -13,7 +13,8 @@ class IcingaImporterController < ApplicationController
       end
     end
     icinga_importer = IcingaImporter.new(@customer)
-    icinga_importer.import_downtimes_from_icinga(URI.encode(customer_params[:url]), customer_params[:username], customer_params[:password])
+    uri_encoded_url = URI.encode(customer_params[:url])
+    icinga_importer.import_downtimes_from_icinga(uri_encoded_url, customer_params[:username], customer_params[:password])
   end
 
   private
