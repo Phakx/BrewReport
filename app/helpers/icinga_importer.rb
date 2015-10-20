@@ -23,7 +23,12 @@ class IcingaImporter
   private
   def fetch_xml(username, password, uri)
     begin
-      unparsed_xml = open(uri.to_s, :http_basic_authentication => [username, password])
+      if username.blank? && password.blank?
+        unparsed_xml = open(uri.to_s)
+      else
+        unparsed_xml = open(uri.to_s, :http_basic_authentication => [username, password])
+      end
+
       Rails.logger.debug "unparsed xml: #{unparsed_xml}"
 
       archive_import_file(unparsed_xml)
